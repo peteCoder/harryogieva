@@ -31,7 +31,7 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
                   href="/"
                   className="border border-[#b19a55] mt-5 px-7 py-4 text-white bg-[#b19a55] hover:bg-transparent hover:text-[#b19a55] inline-block uppercase"
                 >
-                  Let's Connect
+                  Let&apos;s Connect
                 </Link>
               </div>
             </div>
@@ -128,9 +128,9 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
                 <span className="font-semibold">CleverCode Technologies</span>
                 <span className="text-white">
                   Website designed and developed by{" "}
-                  <a href="/" className="underline hover:text-purple-500">
+                  <Link href="/" className="underline hover:text-purple-500">
                     CleverCode Technologies
-                  </a>
+                  </Link>
                 </span>
               </div>
 

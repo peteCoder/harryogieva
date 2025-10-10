@@ -33,8 +33,8 @@ const AboutOwner = () => {
             <p>
               As part of this select group, Harry serves as a trusted adviser
               who brings local market expertise and valuable global connections
-              to his clients. He is excited to be part of eXp’s exclusive eXp
-              Luxury real estate program, which provides access to advanced
+              to his clients. He is excited to be part of eXp&apos;s exclusive
+              eXp Luxury real estate program, which provides access to advanced
               tools, training, and technology.
             </p>
             <p>

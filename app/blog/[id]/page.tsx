@@ -4,6 +4,7 @@ import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import { Facebook, Twitter, X, Mail } from "lucide-react";
 import RecentBlogPosts from "@/components/main/RecentBlogPosts";
+import Link from "next/link";
 
 const BlogDetails = () => {
   return (
@@ -56,9 +57,9 @@ const BlogDetails = () => {
         <p className="text-sm md:text-base xl:text-lg leading-relaxed mb-8">
           For homeowners looking to enhance their living space or increase the
           market value of their property,{" "}
-          <a className="underline hover:text-[#ccb091]" href="/">
+          <Link className="underline hover:text-[#ccb091]" href="/">
             selecting the right home improvements
-          </a>{" "}
+          </Link>{" "}
           is crucial. While many projects can make a house more comfortable or
           aesthetically pleasing, not all contribute equally to its resale
           value. Understanding which renovations yield the best return on
@@ -74,7 +75,7 @@ const BlogDetails = () => {
         </h2>
         <p className="text-sm md:text-base xl:text-lg mb-10 leading-relaxed">
           A kitchen remodel consistently ranks high in terms of ROI. However,
-          it's the scale of the remodel that often determines the return. Minor
+          it&apos;s the scale of the remodel that often determines the return. Minor
           kitchen renovations, such as updating cabinets with modern hardware,
           replacing old appliances with energy-efficient models, resurfacing
           countertops, and installing new flooring or backsplashes, can
@@ -90,12 +91,12 @@ const BlogDetails = () => {
         </h2>
         <p className="text-sm md:text-base xl:text-lg mb-10 leading-relaxed">
           Bathrooms are another critical area where renovations can
-          significantly impact a home's value. Updating an outdated bathroom
+          significantly impact a home&apos;s value. Updating an outdated bathroom
           with modern fixtures, efficient toilets, and contemporary tiling can
           transform the space and appeal to contemporary buyers. Well-executed
           bathroom renovations can recoup around 70% of their costs at resale.
           More extensive renovations, such as expanding the space or adding
-          double sinks, can also increase a home's marketability and usability.
+          double sinks, can also increase a home&apos;s marketability and usability.
         </p>
 
         {/* Section 3 */}
@@ -106,7 +107,7 @@ const BlogDetails = () => {
           As energy costs rise and environmental concerns grow, energy-efficient
           home improvements have become increasingly desirable. Replacing old
           windows with energy-efficient alternatives not only reduces heating
-          and cooling costs but also improves comfort and the home's overall
+          and cooling costs but also improves comfort and the home&apos;s overall
           aesthetic. Similarly, upgrading insulation and HVAC systems to more
           efficient versions can offer significant returns, both in terms of
           energy savings and increased home value.
@@ -117,7 +118,7 @@ const BlogDetails = () => {
           Adding Deck or Patio Space
         </h2>
         <p className="text-sm md:text-base xl:text-lg mb-10 leading-relaxed">
-          Outdoor living areas have become particularly valuable in today's real
+          Outdoor living areas have become particularly valuable in today&apos;s real
           estate market. Adding a deck or patio can extend the livable space of
           a home and provide an attractive feature for potential buyers. The ROI
           for deck additions can vary but often hovers around 65–75%, depending

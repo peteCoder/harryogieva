@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useForm } from "react-hook-form";
-import { MapPin, Mail, Phone, Facebook, Linkedin, Share2 } from "lucide-react";
+import {  Facebook, Linkedin, Share2 } from "lucide-react";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import PageHero from "../properties/_components/PageHero";

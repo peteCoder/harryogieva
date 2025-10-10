@@ -11,6 +11,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import HouseCard from "./HouseCard";
 import { listings } from "@/lib/constants";
+import Link from "next/link";
 
 
 
@@ -51,12 +52,12 @@ const HomeListings = () => {
               <CarouselPrevious className=" static bg-[#ccb091] text-white hover:bg-[#b19a55] w-9 h-9 sm:w-10 sm:h-10 rounded-full" />
               <CarouselNext className=" static bg-[#ccb091] text-white hover:bg-[#b19a55] w-9 h-9 sm:w-10 sm:h-10 rounded-full" />
             </div>
-            <a
+            <Link
               href="/"
               className="uppercase bg-[#ccb091] text-white hover:bg-transparent border border-[#ccb091] hover:border-[#b19a55] hover:text-[#b19a55] px-8 py-3"
             >
               View All
-            </a>
+            </Link>
           </div>
         </Carousel>
       </div>

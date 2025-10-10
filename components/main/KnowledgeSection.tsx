@@ -23,7 +23,7 @@ const KnowledgeSection = () => {
     <section className="bg-white py-10 px-6 text-center">
       <div className="max-w-8xl mx-auto">
         <motion.h3 className="text-xl sm:text-2xl md:text-3xl font-light uppercase text-[#b19a55] mb-2">
-          Harry Ogieva's
+          Harry Ogieva&apos;s
         </motion.h3>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

@@ -23,7 +23,7 @@ const PropertyListings = () => {
           </h2>
 
           <div className="grid gap-3 lg:gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-            {listings.map((listing, index) => (
+            {listings.map((listing) => (
               <HouseCard key={listing.id} {...listing} />
             ))}
           </div>
