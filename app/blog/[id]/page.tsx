@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
-import { Facebook, Twitter, X, Mail } from "lucide-react";
+import { Facebook, X, Mail } from "lucide-react";
 import RecentBlogPosts from "@/components/main/RecentBlogPosts";
 import Link from "next/link";
 

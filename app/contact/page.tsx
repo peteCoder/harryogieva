@@ -1,20 +1,29 @@
 "use client";
 
 import React from "react";
-import { useForm } from "react-hook-form";
-import {  Facebook, Linkedin, Share2 } from "lucide-react";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { Facebook, Linkedin, Share2 } from "lucide-react";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import PageHero from "../properties/_components/PageHero";
+
+// Define the type for form data
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 
 const ContactPage = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormData>(); // Specify the type for the form data
 
-  const onSubmit = (data: any) => {
+  // Define the onSubmit function with the correct type
+  const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log("Form submitted:", data);
   };
 
@@ -57,7 +66,7 @@ const ContactPage = () => {
                 />
                 {errors.name && (
                   <p className="text-red-400 text-sm mt-1">
-                    {errors.name.message as string}
+                    {errors.name.message}
                   </p>
                 )}
               </div>
@@ -77,7 +86,7 @@ const ContactPage = () => {
                 />
                 {errors.email && (
                   <p className="text-red-400 text-sm mt-1">
-                    {errors.email.message as string}
+                    {errors.email.message}
                   </p>
                 )}
               </div>
@@ -93,7 +102,7 @@ const ContactPage = () => {
                 />
                 {errors.phone && (
                   <p className="text-red-400 text-sm mt-1">
-                    {errors.phone.message as string}
+                    {errors.phone.message}
                   </p>
                 )}
               </div>
@@ -106,7 +115,7 @@ const ContactPage = () => {
                 ></textarea>
                 {errors.message && (
                   <p className="text-red-400 text-sm mt-1">
-                    {errors.message.message as string}
+                    {errors.message.message}
                   </p>
                 )}
               </div>

@@ -59,7 +59,7 @@ const AboutOwner = () => {
                 href={"/"}
                 className="border border-[#b19a55] px-4 py-4 text-[#b19a55] hover:bg-[#b19a55] hover:text-white sm:w-1/2 flex items-center justify-center uppercase"
               >
-                Let's Connect
+                Let&apos;s Connect
               </Link>
               <Link
                 href={"/"}
