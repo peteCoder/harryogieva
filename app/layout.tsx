@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Spinnaker } from "next/font/google";
 import "./globals.css";
+import LiveChatAndWhatsapp from "@/components/main/LiveChatAndWhatsapp";
 
 const spinnaker = Spinnaker({
   subsets: ["latin"],
@@ -22,6 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${spinnaker.variable} font-spinnaker antialiased`}>
         {children}
+
+        <LiveChatAndWhatsapp />
       </body>
     </html>
   );

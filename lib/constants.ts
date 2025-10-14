@@ -1,3 +1,15 @@
+export const ownerDetails = {
+  name: "Harry Ogieva",
+  email: "harryrealtor@harryogieva.com",
+  domain: "https://www.harryogieva.com",
+  phone: "(+234)8189153596",
+  address: "302 Constants Road",
+  facebook: "/",
+  instagram: "/",
+  twitter: "/",
+  linkedin: "/",
+};
+
 export const listings = [
   {
     id: "1",

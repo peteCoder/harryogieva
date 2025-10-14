@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import { Facebook, Linkedin, Mail } from "lucide-react";
+import { Facebook, Linkedin, Mail, Instagram } from "lucide-react";
+import { ownerDetails } from "@/lib/constants";
 
 const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
   return (
@@ -28,7 +29,7 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
 
               <div>
                 <Link
-                  href="/"
+                  href="/contact"
                   className="border border-[#b19a55] mt-5 px-7 py-4 text-white bg-[#b19a55] hover:bg-transparent hover:text-[#b19a55] inline-block uppercase"
                 >
                   Let&apos;s Connect
@@ -52,24 +53,32 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
             </div>
 
             {/* Contact Info */}
-            <div>
-              <h3 className="font-semibold text-[#ccb091] uppercase mb-3 text-sm">
-                CONTACT
-              </h3>
-              <p className="text-sm">+234-800-123-4567</p>
-              <p className="text-sm underline">harry.ogieva@example.com</p>
-            </div>
+
+            {ownerDetails.phone ||
+              (ownerDetails.email && (
+                <div>
+                  <h3 className="font-semibold text-[#ccb091] uppercase mb-3 text-sm">
+                    CONTACT
+                  </h3>
+
+                  {ownerDetails.phone && (
+                    <p className="text-sm">{ownerDetails.phone}</p>
+                  )}
+                  {ownerDetails.email && (
+                    <p className="text-sm underline">{ownerDetails.email}</p>
+                  )}
+                </div>
+              ))}
 
             {/* Address */}
-            <div>
-              <h3 className="font-semibold text-[#ccb091] uppercase mb-3 text-sm">
-                Address
-              </h3>
-              <p className="text-sm">
-                414 Church St Suite #201 <br />
-                Lagos, Nigeria
-              </p>
-            </div>
+            {ownerDetails.address && (
+              <div>
+                <h3 className="font-semibold text-[#ccb091] uppercase mb-3 text-sm">
+                  Address
+                </h3>
+                <p className="text-sm">{ownerDetails.address}</p>
+              </div>
+            )}
           </div>
 
           {/* Middle Row - Navigation + Social */}
@@ -79,16 +88,16 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
               <Link href="/" className="hover:text-[#ccb091]">
                 Home
               </Link>
-              <Link href="/" className="hover:text-[#ccb091]">
+              <Link href="/about" className="hover:text-[#ccb091]">
                 Meet Harry
               </Link>
-              <Link href="/" className="hover:text-[#ccb091]">
+              <Link href="/properties" className="hover:text-[#ccb091]">
                 Properties
               </Link>
-              <Link href="/" className="hover:text-[#ccb091]">
+              <Link href="/testimonials" className="hover:text-[#ccb091]">
                 Testimonials
               </Link>
-              <Link href="/" className="hover:text-[#ccb091]">
+              <Link href="/contact" className="hover:text-[#ccb091]">
                 Contact
               </Link>
             </div>

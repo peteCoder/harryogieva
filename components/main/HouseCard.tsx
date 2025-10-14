@@ -5,22 +5,22 @@ import Link from "next/link";
 
 interface HouseCardProps {
   id: string;
-  image: string;
-  price: string;
-  address: string;
-  beds: number;
-  baths: number;
-  size: string;
+  name: string;
+  image: string; // Assuming image is the first image in the images array
+  excerpt: string; // Using excerpt as price in your case
+  location: string; // Location
+  propertyType: string;
+  forSale: boolean;
 }
 
 const HouseCard = ({
   id,
   image,
-  price,
-  address,
-  beds,
-  baths,
-  size,
+  name,
+  excerpt,
+  location,
+  propertyType,
+  forSale,
 }: HouseCardProps) => {
   return (
     <Link
@@ -31,30 +31,34 @@ const HouseCard = ({
         <div className="w-full h-[250px] overflow-hidden">
           <Image
             src={image}
-            alt={address}
+            alt={location}
             width={400}
             height={300}
             className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-110"
           />
         </div>
 
-        <span className="absolute top-4 right-4 bg-[#b19a55] text-white text-xs font-semibold px-3 py-1 uppercase">
-          For Sale
-        </span>
+        {!forSale ? (
+          <span className="absolute top-4 right-4 bg-[#b19a55] text-white text-xs font-semibold px-3 py-1 uppercase">
+            For Sale
+          </span>
+        ) : (
+          <span className="absolute top-4 right-4 bg-[#b19a55] text-white text-xs font-semibold px-3 py-1 uppercase">
+            Sold
+          </span>
+        )}
       </div>
 
       <div className="p-5 text-left">
-        <p className="text-2xl font-semibold text-[#3a2e25] mb-1">{price}</p>
-        <p className="text-[#3a2e25] font-medium text-sm mb-3">{address}</p>
-        {beds && baths && size && (
-          <div className="flex gap-3 text-[#5c4f3a] text-xs uppercase">
-            <span>{beds} Beds</span>
-            <span>|</span>
-            <span>{baths} Baths</span>
-            <span>|</span>
-            <span>{size}</span>
-          </div>
-        )}
+        <p className="text-2xl font-semibold text-[#3a2e25] mb-1 uppercase">
+          {name}
+        </p>
+        <p className="text-[#3a2e25] font-medium text-sm mb-3 uppercase">
+          {excerpt}
+        </p>
+        <p className="font-medium text-xs mb-3 uppercase inline-block p-2 px-3 rounded-full text-white bg-[#b19a55]">
+          {propertyType}
+        </p>
       </div>
     </Link>
   );

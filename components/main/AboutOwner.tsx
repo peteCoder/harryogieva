@@ -3,15 +3,15 @@ import Link from "next/link";
 
 const AboutOwner = () => {
   return (
-    <section className="bg-[#f7f3f0] text-gray-800 py-10 ">
-      <div className=" px-4 md:px-0 flex flex-col md:flex-row items-start gap-10 container xl:mx-auto">
+    <section className="bg-[#f7f3f0] text-gray-800 py-10">
+      <div className="px-4 md:px-0 flex flex-col md:flex-row items-start gap-10 container xl:mx-auto">
         {/* Image */}
         <div className="md:w-1/2 w-full">
           <Image
-            src="/images/owner.webp"
+            src="/images/owner.jpg"
             width={2048}
             height={3069}
-            alt="owner image"
+            alt="Harry Ogieva"
             className="w-full h-auto object-cover rounded-lg md:rounded-none shadow-lg"
           />
         </div>
@@ -27,42 +27,52 @@ const AboutOwner = () => {
 
           <div className="space-y-6 mt-5 leading-relaxed text-gray-700">
             <p>
-              Harry has joined eXp Realty, the fastest-growing global real
-              estate brokerage in the world.
+              With years of experience and an unmatched passion for real estate,
+              Harry Ogieva has built a reputation as one of the most trusted and
+              knowledgeable real estate professionals in Nigeria. Currently, he
+              is affiliated with eXp Realty, the world's fastest-growing global
+              real estate brokerage.
             </p>
             <p>
-              As part of this select group, Harry serves as a trusted adviser
-              who brings local market expertise and valuable global connections
-              to his clients. He is excited to be part of eXp&apos;s exclusive
-              eXp Luxury real estate program, which provides access to advanced
-              tools, training, and technology.
+              Harry's expertise spans multiple regions, including Lagos, Abuja,
+              and Benin City. His local market insight, paired with valuable
+              international connections, empowers his clients to make
+              well-informed decisions in an ever-evolving real estate market. As
+              a dedicated and driven associate broker, he is part of the
+              exclusive eXp Luxury program, which offers advanced tools,
+              technology, and training to elevate his clients' experiences.
             </p>
             <p>
-              Harry is an associate broker, certified residential specialist,
-              and graduate of the Realtor Institute. His licenses are active in
-              Idaho and Washington.
+              A Certified Residential Specialist (CRS) and a Graduate of the
+              Realtor Institute, Harry's licenses are active across multiple
+              regions, including Lagos and Abuja. His professionalism, coupled
+              with his vast knowledge of the industry, has earned him multiple
+              Top Producer awards and a long list of satisfied clients.
             </p>
             <p>
-              Over his career, Harry has earned numerous awards including
-              multiple Top Producer honors. His leadership and experience in the
-              industry continue to make him one of the most respected agents in
-              his region.
+              In addition to his accolades in real estate, Harry remains
+              grounded and involved in the community, frequently supporting
+              local charities, schools, and community events. When he's not
+              helping clients find their dream homes, you can find him enjoying
+              outdoor activities such as biking, hiking, and sailing. His love
+              for adventure, combined with a deep commitment to his clients'
+              success, makes him a standout in the real estate field.
             </p>
             <p>
-              Outside of real estate, Harry enjoys supporting local charities,
-              traveling, spending time with family, and pursuing outdoor
-              activities such as biking, hiking, and sailing.
+              Whether you're buying your first home, investing in a luxury
+              property, or seeking expert advice on real estate markets, Harry
+              Ogieva is here to guide you every step of the way.
             </p>
 
             <div className="flex gap-3 item-center flex-col sm:flex-row">
               <Link
-                href={"/"}
+                href="/contact"
                 className="border border-[#b19a55] px-4 py-4 text-[#b19a55] hover:bg-[#b19a55] hover:text-white sm:w-1/2 flex items-center justify-center uppercase"
               >
-                Let&apos;s Connect
+                Let's Connect
               </Link>
               <Link
-                href={"/"}
+                href="/about"
                 className="border border-[#b19a55] px-7 py-4 text-white bg-[#b19a55] hover:bg-transparent hover:text-[#b19a55] sm:w-1/2 flex items-center justify-center uppercase"
               >
                 Learn More

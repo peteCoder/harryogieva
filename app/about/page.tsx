@@ -7,6 +7,8 @@ import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import PageHero from "../properties/_components/PageHero";
 
+import { ownerDetails } from "@/lib/constants";
+
 const AboutPage = () => {
   return (
     <main className="bg-[#f7f3f0] text-[#3a3225]">
@@ -21,7 +23,7 @@ const AboutPage = () => {
         {/* Image */}
         <div className="w-full md:w-1/2 flex justify-center">
           <Image
-            src="/images/owner.webp"
+            src="/images/owner.jpg"
             alt="Harry Ogieva"
             width={500}
             height={600}
@@ -40,7 +42,7 @@ const AboutPage = () => {
               <h4 className="font-semibold uppercase text-xs text-[#b19a55] mb-1">
                 Primary Phone
               </h4>
-              <p>(208) 255-8360</p>
+              <p>{ownerDetails.phone}</p>
             </div>
 
             <div>
@@ -48,10 +50,10 @@ const AboutPage = () => {
                 Email
               </h4>
               <Link
-                href="mailto:cindy.bond12@gmail.com"
+                href={`mailto:${ownerDetails.email}`}
                 className="hover:underline"
               >
-                harry.houses@gmail.com
+                {ownerDetails.email}
               </Link>
             </div>
 
@@ -59,32 +61,26 @@ const AboutPage = () => {
               <h4 className="font-semibold uppercase text-xs text-[#b19a55] mb-1">
                 Address
               </h4>
-              <Link
-                href="https://maps.google.com?q=414+Church+St.,+Suite+%23201,+Sandpoint,+ID+83864"
-                target="_blank"
-                className="hover:underline"
-              >
-                414 Church St., Suite #201, Sandpoint, ID 83864
-              </Link>
+              <div className="hover:underline">{ownerDetails.address}</div>
             </div>
           </div>
 
           {/* Socials */}
           <div className="flex justify-center md:justify-start gap-4 pt-4">
             <Link
-              href="#"
+              href={ownerDetails.facebook}
               className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
             >
               <Facebook className="w-4 h-4" />
             </Link>
             <Link
-              href="#"
+              href={ownerDetails.linkedin}
               className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
             >
               <Linkedin className="w-4 h-4" />
             </Link>
             <Link
-              href="mailto:cindy.bond12@gmail.com"
+              href={`mailto:${ownerDetails.email}`}
               className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
             >
               <Mail className="w-4 h-4" />
@@ -100,58 +96,64 @@ const AboutPage = () => {
         </h2>
         <hr className="border-[#b19a55] mb-6 w-20" />
         <h3 className="uppercase text-[#b19a55] tracking-widest font-medium mb-6">
-          Serving North Idaho and Eastern Washington
+          Serving Lagos, Abuja, Benin City, and Beyond
         </h3>
 
         <div className="space-y-5 text-[#4a4336] text-sm md:text-base leading-relaxed">
           <p>
-            I take pride in introducing our beautiful, scenic area of the Inland
-            Northwest, which encompasses North Idaho and the greater Spokane
-            region, an area affording endless outdoor recreational opportunities
-            on numerous lakes and rivers, significant access to national
-            forests, world-class skiing, and more!
+            I take immense pride in helping individuals and families find their
+            ideal homes in the vibrant cities of Lagos, Abuja, Benin City, and
+            the surrounding regions. These areas offer a unique blend of
+            culture, opportunity, and comfort, and I am honored to be part of
+            this community.
           </p>
           <p>
-            Upon entering the real estate industry, I was co-owner of a
-            residential building company (1983-2002). I received my real estate
-            license in 1996, hit the ground running, and was awarded Rookie of
-            the Year in 1996 at Prudential NW Realty in the Seattle area.
+            My journey into real estate began with my passion for connecting
+            people with the right properties. After obtaining my license, I
+            quickly grew to be a trusted advisor in the industry. With years of
+            experience in both residential and commercial real estate, I&apos;ve
+            earned a reputation for my attention to detail and commitment to
+            delivering results.
           </p>
           <p>
-            I have been affiliated with Tomlinson Sotheby’s International Realty
-            since 2000 as a Co-Owner (2004 - 2019) and Associate Broker (2000 -
-            2023). During that time, I earned the achievement of #1 Top Producer
-            during 2007 - 2012, and 2014 - 2022, and I led the market regionally
-            in the sale of luxury properties.
+            Over the years, I&apos;ve worked tirelessly to stay ahead of market
+            trends, which has allowed me to guide clients through the
+            complexities of real estate transactions with ease. I&apos;m proud to
+            have achieved significant milestones in my career, including
+            multiple awards for excellence and consistent top producer rankings.
           </p>
           <p>
-            I am excited to be part of a new partnership with eXp Luxury,
-            heading up the Bond Real Estate Group! The innovative luxury
-            marketing utilizing the latest technology in our changing real
-            estate environment through eXp Luxury is unsurpassed.
+            With an extensive network and an unwavering dedication to my
+            clients, I offer a comprehensive approach to buying, selling, and
+            investing in real estate. I pride myself on providing personalized
+            services, leveraging the latest tools and technologies, and making
+            each transaction smooth and seamless.
           </p>
           <p>
-            I am confident about the systems and tools I put into practice to
-            provide the marketing and sales advantage my clients deserve. I work
-            diligently to provide exceptional, competent, and professional
-            services as we work together through the sale and/or selection and
-            acquisition of desired properties.
+            I&apos;m excited to now be part of the prestigious team at eXp Realty,
+            where I continue to expand my reach and offer unmatched services in
+            the luxury real estate market. Through this partnership, I provide
+            my clients access to a vast array of resources, from cutting-edge
+            marketing tools to global connections.
           </p>
           <p>
-            My real estate licenses are active in both Idaho and Washington. I
-            bring a wealth of experience and strong negotiating skills to every
-            transaction, and I am confident you will be pleased with your choice
-            to work with me.
+            My licenses are active in Lagos, Abuja, and Benin City, and I am
+            constantly working to improve my knowledge and skills to better
+            serve my clients. I work diligently to ensure that every transaction
+            is not only successful but also a positive experience for everyone
+            involved.
           </p>
           <p>
-            I am involved within the local community by supporting multiple
-            charities and educational endeavors which are instrumental in
-            supporting and enhancing the dynamic living experience we enjoy
-            within this region.
+            Outside of real estate, I am deeply involved in local charity work,
+            supporting educational programs and community-building initiatives.
+            I am passionate about contributing to the region's growth and
+            helping others achieve their dreams, both in life and in property
+            ownership.
           </p>
           <p>
-            I have been involved within the local Real Estate community serving
-            on the Multiple Listing Service Board of Directors (2007-2023).
+            Additionally, I have served on various industry boards, including
+            the Real Estate Board of Nigeria, where I&apos;ve contributed to shaping
+            industry standards and fostering growth.
           </p>
         </div>
       </section>
