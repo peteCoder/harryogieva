@@ -89,8 +89,8 @@ const BlogDetailClient = ({ id }: { id: string }) => {
   }
 
   // Render blog post details
-  const url = window.location.href; // The current URL of the blog post page
-  const title = blogPost?.title; // Blog post title
+  const url = typeof window !== "undefined" ? window.location.href : ""; // The current URL of the blog post page
+  const title = blogPost?.title || ""; // Blog post title
 
   return (
     <main className="bg-[#fff]">
@@ -98,19 +98,21 @@ const BlogDetailClient = ({ id }: { id: string }) => {
 
       {/* Hero Section */}
       <section className="relative w-full h-[500px]">
-        <Image
-          src={blogPost?.mainImage!} // Dynamic image path from API
-          alt={blogPost?.title!}
-          fill
-          className="object-cover brightness-75"
-        />
+        {blogPost?.mainImage && (
+          <Image
+            src={blogPost.mainImage} // Dynamic image path from API
+            alt={blogPost.title || "Blog Post Image"}
+            fill
+            className="object-cover brightness-75"
+          />
+        )}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-5">
           <h1 className="text-3xl md:text-5xl font-semibold uppercase mb-2">
             {blogPost?.title}
           </h1>
           <p className="text-sm md:text-base">
             {blogPost?.author} |{" "}
-            {new Date(blogPost?.publishedAt!).toLocaleDateString()}
+            {new Date(blogPost?.publishedAt  || "").toLocaleDateString()}
           </p>
 
           {/* Share Icons */}
@@ -128,7 +130,7 @@ const BlogDetailClient = ({ id }: { id: string }) => {
               </a>
               <a
                 href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                  title!
+                  title
                 )}&url=${encodeURIComponent(url)}`}
                 target="_blank"
                 className="p-2 rounded-full bg-white/10 hover:bg-[#b19a55] transition"
@@ -137,7 +139,7 @@ const BlogDetailClient = ({ id }: { id: string }) => {
               </a>
               <a
                 href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-                  title!
+                  title
                 )}%20${encodeURIComponent(url)}`}
                 target="_blank"
                 className="p-2 rounded-full bg-white/10 hover:bg-[#b19a55] transition"
@@ -150,10 +152,9 @@ const BlogDetailClient = ({ id }: { id: string }) => {
       </section>
 
       {/* Blog Content */}
-      <section className="max-w-5xl mx-auto py-16 px-6 md:px-2 text-[#3a2e25]">
+      <section className="max-w-5xl mx-auto py-16 px-6 md:px-2 text-[#3a3225]">
         <div className="text-sm md:text-base xl:text-lg leading-relaxed mb-8">
-          {/* {blogPost.content} */}
-          <BlockContentRenderer blocks={blogPost?.content!} />
+          <BlockContentRenderer blocks={blogPost?.content || []} />
         </div>
       </section>
 
