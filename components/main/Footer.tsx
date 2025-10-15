@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Facebook, Linkedin, Mail, Instagram } from "lucide-react";
+import { Facebook, Linkedin, Mail } from "lucide-react";
 import { ownerDetails } from "@/lib/constants";
 
 const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {

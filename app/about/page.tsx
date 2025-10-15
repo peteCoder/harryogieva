@@ -118,8 +118,8 @@ const AboutPage = () => {
           <p>
             Over the years, I&apos;ve worked tirelessly to stay ahead of market
             trends, which has allowed me to guide clients through the
-            complexities of real estate transactions with ease. I&apos;m proud to
-            have achieved significant milestones in my career, including
+            complexities of real estate transactions with ease. I&apos;m proud
+            to have achieved significant milestones in my career, including
             multiple awards for excellence and consistent top producer rankings.
           </p>
           <p>
@@ -130,11 +130,11 @@ const AboutPage = () => {
             each transaction smooth and seamless.
           </p>
           <p>
-            I&apos;m excited to now be part of the prestigious team at eXp Realty,
-            where I continue to expand my reach and offer unmatched services in
-            the luxury real estate market. Through this partnership, I provide
-            my clients access to a vast array of resources, from cutting-edge
-            marketing tools to global connections.
+            I&apos;m excited to now be part of the prestigious team at eXp
+            Realty, where I continue to expand my reach and offer unmatched
+            services in the luxury real estate market. Through this partnership,
+            I provide my clients access to a vast array of resources, from
+            cutting-edge marketing tools to global connections.
           </p>
           <p>
             My licenses are active in Lagos, Abuja, and Benin City, and I am
@@ -146,14 +146,14 @@ const AboutPage = () => {
           <p>
             Outside of real estate, I am deeply involved in local charity work,
             supporting educational programs and community-building initiatives.
-            I am passionate about contributing to the region's growth and
+            I am passionate about contributing to the region&apos;s growth and
             helping others achieve their dreams, both in life and in property
             ownership.
           </p>
           <p>
             Additionally, I have served on various industry boards, including
-            the Real Estate Board of Nigeria, where I&apos;ve contributed to shaping
-            industry standards and fostering growth.
+            the Real Estate Board of Nigeria, where I&apos;ve contributed to
+            shaping industry standards and fostering growth.
           </p>
         </div>
       </section>

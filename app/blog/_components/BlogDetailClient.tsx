@@ -70,7 +70,7 @@ const BlogDetailClient = ({ id }: { id: string }) => {
               Oops! Blog Post Not Found
             </h2>
             <p className="text-lg text-[#4a4336] mb-6">
-              We're sorry, but we couldn't find the blog post you're looking
+              We&apos;re sorry, but we couldn&apos;t find the blog post you&apos;re looking
               for. It may have been removed, or the link may be outdated.
             </p>
             <Link

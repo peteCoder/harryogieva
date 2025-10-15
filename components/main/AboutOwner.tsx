@@ -30,21 +30,21 @@ const AboutOwner = () => {
               With years of experience and an unmatched passion for real estate,
               Harry Ogieva has built a reputation as one of the most trusted and
               knowledgeable real estate professionals in Nigeria. Currently, he
-              is affiliated with eXp Realty, the world's fastest-growing global
+              is affiliated with eXp Realty, the world&apos;s fastest-growing global
               real estate brokerage.
             </p>
             <p>
-              Harry's expertise spans multiple regions, including Lagos, Abuja,
+              Harry&apos;s expertise spans multiple regions, including Lagos, Abuja,
               and Benin City. His local market insight, paired with valuable
               international connections, empowers his clients to make
               well-informed decisions in an ever-evolving real estate market. As
               a dedicated and driven associate broker, he is part of the
               exclusive eXp Luxury program, which offers advanced tools,
-              technology, and training to elevate his clients' experiences.
+              technology, and training to elevate his clients&apos; experiences.
             </p>
             <p>
               A Certified Residential Specialist (CRS) and a Graduate of the
-              Realtor Institute, Harry's licenses are active across multiple
+              Realtor Institute, Harry&apos;s licenses are active across multiple
               regions, including Lagos and Abuja. His professionalism, coupled
               with his vast knowledge of the industry, has earned him multiple
               Top Producer awards and a long list of satisfied clients.
@@ -52,14 +52,14 @@ const AboutOwner = () => {
             <p>
               In addition to his accolades in real estate, Harry remains
               grounded and involved in the community, frequently supporting
-              local charities, schools, and community events. When he's not
+              local charities, schools, and community events. When he&apos;s not
               helping clients find their dream homes, you can find him enjoying
               outdoor activities such as biking, hiking, and sailing. His love
-              for adventure, combined with a deep commitment to his clients'
+              for adventure, combined with a deep commitment to his clients&apos;
               success, makes him a standout in the real estate field.
             </p>
             <p>
-              Whether you're buying your first home, investing in a luxury
+              Whether you&apos;re buying your first home, investing in a luxury
               property, or seeking expert advice on real estate markets, Harry
               Ogieva is here to guide you every step of the way.
             </p>
@@ -69,7 +69,7 @@ const AboutOwner = () => {
                 href="/contact"
                 className="border border-[#b19a55] px-4 py-4 text-[#b19a55] hover:bg-[#b19a55] hover:text-white sm:w-1/2 flex items-center justify-center uppercase"
               >
-                Let's Connect
+                Let&apos;s Connect
               </Link>
               <Link
                 href="/about"

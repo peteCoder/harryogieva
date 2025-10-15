@@ -4,11 +4,11 @@ import React, { useEffect, useState } from "react";
 import PageHero from "./_components/PageHero";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
-import { listings } from "@/lib/constants";
 import HouseCard from "@/components/main/HouseCard";
+import { PropertyType } from "@/lib/types";
 
 const PropertyListings = () => {
-  const [properties, setProperties] = useState<any[]>([]);
+  const [properties, setProperties] = useState<PropertyType[]>([]);
   const [loading, setLoading] = useState(true);
 
   // Fetch properties from API

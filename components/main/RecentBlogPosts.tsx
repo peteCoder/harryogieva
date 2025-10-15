@@ -12,10 +12,13 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useState, useEffect } from "react";
+import { BlogPostType } from "@/lib/types";
 
 const RecentBlogPosts = ({ id }: { id: string }) => {
-  const [blogPosts, setBlogPosts] = useState<any[]>([]); // Store all blog posts
-  const [filteredBlogPosts, setFilteredBlogPosts] = useState<any[]>([]); // Store filtered blog posts (excluding current post)
+  const [blogPosts, setBlogPosts] = useState<BlogPostType[]>([]); // Store all blog posts
+  const [filteredBlogPosts, setFilteredBlogPosts] = useState<BlogPostType[]>(
+    []
+  ); // Store filtered blog posts (excluding current post)
   const [loading, setLoading] = useState<boolean>(true); // Loading state
 
   const plugin = React.useRef(

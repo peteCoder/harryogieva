@@ -11,7 +11,7 @@ const BlogListings = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const fetchBlogPosts = async () => {
+    const fetchBlogPosts = async () => { 
       try {
         const response = await fetch("/api/blog");
         const data = await response.json();

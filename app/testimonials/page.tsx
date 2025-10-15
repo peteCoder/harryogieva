@@ -3,13 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
-import Image from "next/image";
-import {
-  ChevronLeft,
-  ChevronRight,
-  ChevronDown,
-  ChevronUp,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { TestimonialType } from "@/lib/types";
 
 // Skeleton loader component
 const SkeletonLoader = () => (
@@ -25,7 +20,7 @@ const SkeletonLoader = () => (
 );
 
 const Testimonials = () => {
-  const [testimonials, setTestimonials] = useState<any[]>([]);
+  const [testimonials, setTestimonials] = useState<TestimonialType[]>([]);
   const [loading, setLoading] = useState(true); // Loading state
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -104,7 +99,7 @@ const Testimonials = () => {
 
               {/* Content */}
               <p className="text-sm md:text-base xl:text-lg leading-relaxed italic mb-5">
-                {expandedId === t._id ? t.fullContent : t.testimonial}
+                {t.testimonial}
               </p>
 
               {/* Author */}

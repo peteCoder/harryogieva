@@ -75,7 +75,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
     );
   }
 
-  // If there's an error (property not found)
+  // If there&apos;s an error (property not found)
   if (error) {
     return (
       <main className="bg-[#f7f3f0] min-h-screen flex flex-col justify-center items-center">
@@ -87,7 +87,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
               Oops! Property Not Found
             </h2>
             <p className="text-lg text-[#4a4336] mb-6">
-              We're sorry, but we couldn't find the property you're looking for.
+              We&apos;re sorry, but we couldn&apos;t find the property you&apos;re looking for.
               It may have been removed, or the link may be outdated.
             </p>
             <Link

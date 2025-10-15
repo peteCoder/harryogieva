@@ -10,7 +10,7 @@ export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const page = parseInt(searchParams.get("page") || "1", 10); // Get the page number, default to 1
   const limit = 5; // Number of testimonials per page
-  const skip = (page - 1) * limit; // Calculate skip based on the current page
+  // const skip = (page - 1) * limit; // Calculate skip based on the current page
 
   try {
     // For homepage, fetch first 5 testimonials (no pagination here)

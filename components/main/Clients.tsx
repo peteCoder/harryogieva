@@ -9,6 +9,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Link from "next/link";
+import { TestimonialType } from "@/lib/types";
+import Image from "next/image";
 
 // Define the skeleton loader
 const SkeletonLoader = () => (
@@ -23,7 +25,7 @@ const SkeletonLoader = () => (
 );
 
 const Clients = () => {
-  const [testimonials, setTestimonials] = useState<any[]>([]);
+  const [testimonials, setTestimonials] = useState<TestimonialType[]>([]);
   const [loading, setLoading] = useState(true); // Loading state
 
   // Fetch the first 5 testimonials on component mount
@@ -84,9 +86,11 @@ const Clients = () => {
                       </h3>
                       {/* Optional Profile Image */}
                       {item.image && (
-                        <img
+                        <Image
                           src={item.image}
                           alt={item.name}
+                          width={64}
+                          height={64}
                           className="w-16 h-16 rounded-full"
                         />
                       )}

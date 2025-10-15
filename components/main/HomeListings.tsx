@@ -13,9 +13,10 @@ import Autoplay from "embla-carousel-autoplay";
 import HouseCard from "./HouseCard";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { PropertyType } from "@/lib/types";
 
 const HomeListings = () => {
-  const [properties, setProperties] = useState<any[]>([]);
+  const [properties, setProperties] = useState<PropertyType[]>([]);
   const [loading, setLoading] = useState(true);
 
   const plugin = React.useRef(
