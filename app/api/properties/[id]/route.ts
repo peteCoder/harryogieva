@@ -12,7 +12,7 @@ export async function GET(
 ) {
   try {
     // Get the ID or slug from the URL parameters
-    const { id } = params;
+    const { id } = await params;
 
     // Query to fetch a single property by ID or slug
     // Only return the first result

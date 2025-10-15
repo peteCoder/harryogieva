@@ -1,11 +1,8 @@
-// app/api/blog/[id]/route.ts
 import { client } from "@/lib/client"; // Import custom Sanity client
 import { NextResponse } from "next/server"; // Import NextResponse to send responses
 
-
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
-
 
 // Define the GET request handler for fetching a single blog post by ID
 export async function GET(
@@ -13,7 +10,7 @@ export async function GET(
   { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = params; // Get the ID from URL parameters
+    const { id } = await params; // Get the ID from URL parameters
 
     // RAW string query to fetch a single blog post by ID
     const query = `

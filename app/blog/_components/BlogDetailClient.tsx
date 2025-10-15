@@ -4,13 +4,14 @@ import BlockContentRenderer from "@/components/main/BlockContentRenderer";
 import Footer from "@/components/main/Footer";
 import Navbar from "@/components/main/Navbar";
 import RecentBlogPosts from "@/components/main/RecentBlogPosts";
+import { BlogPostType } from "@/lib/types";
 import { Facebook, Mail, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const BlogDetailClient = ({ id }: { id: string }) => {
-  const [blogPost, setBlogPost] = useState<any>(null); // State for blog post data
+  const [blogPost, setBlogPost] = useState<BlogPostType | null>(null); // State for blog post data
   const [loading, setLoading] = useState<boolean>(true); // Loading state
   const [error, setError] = useState<string | null>(null); // Error state
 
@@ -70,8 +71,9 @@ const BlogDetailClient = ({ id }: { id: string }) => {
               Oops! Blog Post Not Found
             </h2>
             <p className="text-lg text-[#4a4336] mb-6">
-              We&apos;re sorry, but we couldn&apos;t find the blog post you&apos;re looking
-              for. It may have been removed, or the link may be outdated.
+              We&apos;re sorry, but we couldn&apos;t find the blog post
+              you&apos;re looking for. It may have been removed, or the link may
+              be outdated.
             </p>
             <Link
               href="/blog"
@@ -97,18 +99,18 @@ const BlogDetailClient = ({ id }: { id: string }) => {
       {/* Hero Section */}
       <section className="relative w-full h-[500px]">
         <Image
-          src={blogPost.mainImage} // Dynamic image path from API
-          alt={blogPost.title}
+          src={blogPost?.mainImage!} // Dynamic image path from API
+          alt={blogPost?.title!}
           fill
           className="object-cover brightness-75"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-5">
           <h1 className="text-3xl md:text-5xl font-semibold uppercase mb-2">
-            {blogPost.title}
+            {blogPost?.title}
           </h1>
           <p className="text-sm md:text-base">
-            {blogPost.author} |{" "}
-            {new Date(blogPost.publishedAt).toLocaleDateString()}
+            {blogPost?.author} |{" "}
+            {new Date(blogPost?.publishedAt!).toLocaleDateString()}
           </p>
 
           {/* Share Icons */}
@@ -126,7 +128,7 @@ const BlogDetailClient = ({ id }: { id: string }) => {
               </a>
               <a
                 href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                  title
+                  title!
                 )}&url=${encodeURIComponent(url)}`}
                 target="_blank"
                 className="p-2 rounded-full bg-white/10 hover:bg-[#b19a55] transition"
@@ -135,7 +137,7 @@ const BlogDetailClient = ({ id }: { id: string }) => {
               </a>
               <a
                 href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-                  title
+                  title!
                 )}%20${encodeURIComponent(url)}`}
                 target="_blank"
                 className="p-2 rounded-full bg-white/10 hover:bg-[#b19a55] transition"
@@ -151,7 +153,7 @@ const BlogDetailClient = ({ id }: { id: string }) => {
       <section className="max-w-5xl mx-auto py-16 px-6 md:px-2 text-[#3a2e25]">
         <div className="text-sm md:text-base xl:text-lg leading-relaxed mb-8">
           {/* {blogPost.content} */}
-          <BlockContentRenderer blocks={blogPost.content} />
+          <BlockContentRenderer blocks={blogPost?.content!} />
         </div>
       </section>
 

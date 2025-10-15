@@ -17,7 +17,7 @@ export type PropertyType = {
       marks: string[];
       text: string;
     }>;
-    markDefs: any[];
+    markDefs: { type: string; value: string }[];
     style: string;
     level?: number;
     listItem?: string;
@@ -39,7 +39,7 @@ export type BlogPostType = {
       marks: string[];
       text: string;
     }>;
-    markDefs: any[];
+    markDefs: { type: string; value: string }[];
     style: string;
     level?: number;
     listItem?: string;
@@ -50,8 +50,6 @@ export type BlogPostType = {
   slug: { _type: string; current: string };
 };
 
-
-
 export type TestimonialType = {
   _id: string;
   createdAt: string;
@@ -59,8 +57,3 @@ export type TestimonialType = {
   name: string;
   testimonial: string;
 };
-
-
-
-
-

@@ -1,4 +1,3 @@
-// BlockContentRenderer.tsx
 "use client";
 
 import React from "react";
@@ -6,10 +5,10 @@ import blockContentToReact from "@sanity/block-content-to-react"; // Sanity bloc
 import Image from "next/image";
 
 // Define custom serializers for specific block types like images, headings, and lists
-
 const serializers = {
   types: {
     // Image block type
+    // @ts-ignore
     image: ({ node }: { node: any }) => (
       <div className="my-6">
         <Image
@@ -20,6 +19,7 @@ const serializers = {
       </div>
     ),
     // Heading block type (for H1, H2, H3, H4)
+    // @ts-ignore
     block: ({ node }: { node: any }) => {
       switch (node.style) {
         case "h1":
@@ -55,12 +55,14 @@ const serializers = {
       }
     },
     // Handle list items (ordered/unordered)
+    // @ts-ignore
     listItem: ({ node }: { node: any }) => (
       <li className="text-sm md:text-base text-[#4a4336] mb-2">
         {node.children[0].text}
       </li>
     ),
     // Handle unordered list
+    // @ts-ignore
     ul: ({ node }: { node: any }) => (
       <ul className="list-disc pl-5 text-[#4a4336] text-sm md:text-base">
         {node.children.map((child: any) =>
@@ -69,6 +71,7 @@ const serializers = {
       </ul>
     ),
     // Handle ordered list
+    // @ts-ignore
     ol: ({ node }: { node: any }) => (
       <ol className="list-decimal pl-5 text-[#4a4336] text-sm md:text-base">
         {node.children.map((child: any) =>
