@@ -4,12 +4,26 @@ import React from "react";
 import blockContentToReact from "@sanity/block-content-to-react"; // Sanity block content to React
 import Image from "next/image";
 
-// Define custom serializers for specific block types like images, headings, and lists
+// Define the correct type for BlockContent
+interface BlockContent {
+  _key: string;
+  _type: string;
+  children: Array<{
+    _key: string;
+    _type: string;
+    marks: string[];
+    text: string;
+  }>;
+  markDefs: Array<{ _type: string; [key: string]: any }>;
+  style: string;
+  level?: number;
+  listItem?: string;
+}
+
 const serializers = {
   types: {
     // Image block type
-    // @ts-ignore
-    image: ({ node }: { node: any }) => (
+    image: ({ node }: { node: { asset: { url: string }; alt?: string } }) => (
       <div className="my-6">
         <Image
           src={node.asset.url}
@@ -19,8 +33,7 @@ const serializers = {
       </div>
     ),
     // Heading block type (for H1, H2, H3, H4)
-    // @ts-ignore
-    block: ({ node }: { node: any }) => {
+    block: ({ node }: { node: BlockContent }) => {
       switch (node.style) {
         case "h1":
           return (
@@ -55,35 +68,46 @@ const serializers = {
       }
     },
     // Handle list items (ordered/unordered)
-    // @ts-ignore
-    listItem: ({ node }: { node: any }) => (
+    listItem: ({ node }: { node: BlockContent }) => (
       <li className="text-sm md:text-base text-[#4a4336] mb-2">
         {node.children[0].text}
       </li>
     ),
     // Handle unordered list
-    // @ts-ignore
-    ul: ({ node }: { node: any }) => (
+    ul: ({ node }: { node: BlockContent }) => (
       <ul className="list-disc pl-5 text-[#4a4336] text-sm md:text-base">
-        {node.children.map((child: any) =>
-          serializers.types.listItem({ node: child })
-        )}
+        {node.children.map((child) => {
+          // Ensure child has the full structure expected by listItem
+          const fullChild = {
+            ...child,
+            markDefs: child.markDefs || [],
+            style: "normal", // Mock style if missing
+            children: child.children || [],
+          };
+          return serializers.types.listItem({ node: fullChild });
+        })}
       </ul>
     ),
     // Handle ordered list
-    // @ts-ignore
-    ol: ({ node }: { node: any }) => (
+    ol: ({ node }: { node: BlockContent }) => (
       <ol className="list-decimal pl-5 text-[#4a4336] text-sm md:text-base">
-        {node.children.map((child: any) =>
-          serializers.types.listItem({ node: child })
-        )}
+        {node.children.map((child) => {
+          // Ensure child has the full structure expected by listItem
+          const fullChild = {
+            ...child,
+            markDefs: child.markDefs || [],
+            style: "normal", // Mock style if missing
+            children: child.children || [],
+          };
+          return serializers.types.listItem({ node: fullChild });
+        })}
       </ol>
     ),
   },
 };
 
 interface BlockContentRendererProps {
-  blocks: any[]; // Block content array from Sanity
+  blocks: BlockContent[]; // Block content array from Sanity with proper typing
 }
 
 const BlockContentRenderer: React.FC<BlockContentRendererProps> = ({

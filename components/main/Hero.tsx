@@ -22,9 +22,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-[#b19a55] tracking-widest text-sm md:text-base font-semibold uppercase mb-3"
+          className="text-[#b19a55] tracking-widest text-2xl md:text-3xl lg:text-4xl font-semibold uppercase mb-3"
         >
-          Real Estate, Tailored for You.
+          I am
         </motion.p>
 
         <motion.h1
@@ -33,21 +33,21 @@ const Hero = () => {
           transition={{ duration: 1.2, delay: 0.2 }}
           className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 uppercase"
         >
-          Happy Ogieva
+          Harry Ogieva
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.4 }}
-          className="text-base md:text-lg mb-8 text-gray-200"
+          className="text-xl md:text-2xl mb-8 text-gray-200 max-w-[900px] mx-auto"
         >
           And if you are looking to buy or sell real estate in Lagos, Abuja,
           Benin City and surrounding areas, I can help you.
         </motion.p>
 
         <motion.a
-          href="#properties"
+          href="/properties"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}

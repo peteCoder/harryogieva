@@ -5,6 +5,7 @@ import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { TestimonialType } from "@/lib/types";
+import Image from "next/image";
 
 // Skeleton loader component
 const SkeletonLoader = () => (
@@ -22,7 +23,7 @@ const SkeletonLoader = () => (
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState<TestimonialType[]>([]);
   const [loading, setLoading] = useState(true); // Loading state
-  const [expandedId, setExpandedId] = useState<number | null>(null);
+  // const [expandedId, setExpandedId] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
@@ -44,9 +45,9 @@ const Testimonials = () => {
     fetchTestimonials();
   }, [currentPage]); // Fetch when the page changes
 
-  const toggleReadMore = (id: number) => {
-    setExpandedId(expandedId === id ? null : id);
-  };
+  // const toggleReadMore = (id: number) => {
+  //   setExpandedId(expandedId === id ? null : id);
+  // };
 
   // Handle pagination
   const handlePageChange = (newPage: number) => {
@@ -90,10 +91,12 @@ const Testimonials = () => {
             <div key={t._id} className="text-center">
               {/* Testimonial Image */}
               {t.image && (
-                <img
+                <Image
                   src={t.image}
                   alt={t.name}
                   className="w-16 h-16 rounded-full"
+                  width={64}
+                  height={64}
                 />
               )}
 

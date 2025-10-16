@@ -15,9 +15,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import BlockContentRenderer from "@/components/main/BlockContentRenderer";
+import { PropertyType } from "@/lib/types";
 
 const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
-  const [property, setProperty] = useState<any>(null); // Property data state
+  const [property, setProperty] = useState<PropertyType | null>(null); // Property data state
   const [loading, setLoading] = useState<boolean>(true); // Loading state
   const [error, setError] = useState<string | null>(null); // Error state
 
@@ -87,8 +88,9 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
               Oops! Property Not Found
             </h2>
             <p className="text-lg text-[#4a4336] mb-6">
-              We&apos;re sorry, but we couldn&apos;t find the property you&apos;re looking for.
-              It may have been removed, or the link may be outdated.
+              We&apos;re sorry, but we couldn&apos;t find the property
+              you&apos;re looking for. It may have been removed, or the link may
+              be outdated.
             </p>
             <Link
               href="/properties"
@@ -180,7 +182,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
             </a>
             <a
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                title
+                title || ""
               )}&url=${encodeURIComponent(url)}`}
               target="_blank"
               className="p-2 rounded-full bg-white/10 hover:bg-[#b19a55] transition"
@@ -189,7 +191,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
             </a>
             <a
               href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-                title
+                title || ""
               )}%20${encodeURIComponent(url)}`}
               target="_blank"
               className="p-2 rounded-full bg-white/10 hover:bg-[#b19a55] transition"
@@ -200,16 +202,17 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
         </div>
       </section>
 
-      {/* Property Description */}
-      <section className="px-5 md:px-10 lg:px-32 py-16 bg-[#f7f3f0] text-[#3a3225]">
-        <h3 className="text-xl md:text-3xl font-semibold tracking-widest uppercase text-[#3a3225] mb-4">
-          Description
-        </h3>
-        <BlockContentRenderer blocks={property.propertyDescription} />
-      </section>
+      {property?.propertyDescription && (
+        <section className="px-5 md:px-10 lg:px-32 py-16 bg-[#f7f3f0] text-[#3a3225]">
+          <h3 className="text-xl md:text-3xl font-semibold tracking-widest uppercase text-[#3a3225] mb-4">
+            Description
+          </h3>
+          <BlockContentRenderer blocks={property.propertyDescription} />
+        </section>
+      )}
 
       {/* YouTube Video Section */}
-      {property.youTubeIframe && (
+      {property?.youTubeIframe && (
         <section className="px-5 md:px-10 lg:px-32 py-16 bg-[#f7f3f0] text-[#3a3225]">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-semibold tracking-widest uppercase">
@@ -232,7 +235,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
       )}
 
       {/* Map Location Section */}
-      {property.googleMapIframe && (
+      {property?.googleMapIframe && (
         <section className="px-5 md:px-10 lg:px-32 py-16 bg-[#f7f3f0] text-[#3a3225]">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-semibold tracking-widest uppercase">

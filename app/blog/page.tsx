@@ -5,13 +5,14 @@ import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import BlogCard from "@/components/main/BlogCard";
 import PageHero from "@/app/properties/_components/PageHero";
+import { BlogPostType } from "@/lib/types";
 
 const BlogListings = () => {
-  const [blogPosts, setBlogPosts] = useState<any[]>([]);
+  const [blogPosts, setBlogPosts] = useState<BlogPostType[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const fetchBlogPosts = async () => { 
+    const fetchBlogPosts = async () => {
       try {
         const response = await fetch("/api/blog");
         const data = await response.json();
