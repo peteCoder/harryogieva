@@ -8,7 +8,7 @@ export const revalidate = 0;
 // Define the GET request handler for fetching a single property by ID or slug
 export async function GET(
   req: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     // Get the ID or slug from the URL parameters

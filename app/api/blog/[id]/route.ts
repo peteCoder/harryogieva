@@ -7,10 +7,10 @@ export const revalidate = 0;
 // Define the GET request handler for fetching a single blog post by ID
 export async function GET(
   req: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = await params; // Get the ID from URL parameters
+    const { id } = await params; // Await params to get the ID
 
     // RAW string query to fetch a single blog post by ID
     const query = `
