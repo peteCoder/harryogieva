@@ -49,9 +49,9 @@ const ContactPage = () => {
         </div>
 
         {/* ===== Contact Section ===== */}
-        <section className="flex flex-col md:flex-row justify-center items-start gap-10 px-6 md:px-20 py-20">
+        <section className="flex flex-col md:flex-row justify-center items-start gap-10 px-2 md:px-20 py-10 md:py-20">
           {/* Left Form */}
-          <div className="bg-[#3b312b] text-white p-10 w-full md:w-1/2 max-w-lg shadow-lg">
+          <div className="bg-[#3b312b] text-white p-5 md:p-10 w-full md:w-1/2 max-w-lg shadow-lg">
             <h2 className="text-center text-lg font-medium mb-6 tracking-wide">
               GET IN TOUCH
             </h2>
@@ -62,7 +62,7 @@ const ContactPage = () => {
                   type="text"
                   placeholder="Name"
                   {...register("name", { required: "Name is required" })}
-                  className="w-full p-3 bg-transparent border border-gray-500 focus:outline-none"
+                  className="w-full p-2 md:p-3 bg-transparent placeholder:text-sm placeholder:md:text-base border border-gray-500 focus:outline-none"
                 />
                 {errors.name && (
                   <p className="text-red-400 text-sm mt-1">
@@ -82,7 +82,7 @@ const ContactPage = () => {
                       message: "Invalid email",
                     },
                   })}
-                  className="w-full p-3 bg-transparent border border-gray-500 focus:outline-none"
+                  className="w-full p-2 md:p-3 bg-transparent placeholder:text-sm placeholder:md:text-base border border-gray-500 focus:outline-none"
                 />
                 {errors.email && (
                   <p className="text-red-400 text-sm mt-1">
@@ -98,7 +98,7 @@ const ContactPage = () => {
                   {...register("phone", {
                     required: "Phone number is required",
                   })}
-                  className="w-full p-3 bg-transparent border border-gray-500 focus:outline-none"
+                  className="w-full p-2 md:p-3 bg-transparent placeholder:text-sm placeholder:md:text-base border border-gray-500 focus:outline-none"
                 />
                 {errors.phone && (
                   <p className="text-red-400 text-sm mt-1">
@@ -111,7 +111,7 @@ const ContactPage = () => {
                 <textarea
                   placeholder="Message"
                   {...register("message", { required: "Message is required" })}
-                  className="w-full p-3 bg-transparent border border-gray-500 h-32 focus:outline-none"
+                  className="w-full p-2 md:p-3 bg-transparent placeholder:text-sm placeholder:md:text-base border border-gray-500 h-32 focus:outline-none"
                 ></textarea>
                 {errors.message && (
                   <p className="text-red-400 text-sm mt-1">

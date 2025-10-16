@@ -61,7 +61,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
             <div className="bg-gray-300 animate-pulse w-full h-full" />
           </div>
 
-          <div className="mt-20 mb-3 space-y-5 md:mt-30 text-center flex-col flex items-center">
+          <div className="mt-10 mb-3 space-y-3 text-center flex-col flex items-center">
             <div className="h-6 bg-gray-300 animate-pulse rounded w-1/4 mb-2" />
             <div className="h-8 bg-gray-300 animate-pulse rounded w-1/2 mb-2" />
             <div className="flex justify-center items-center gap-3 text-[#5c4f3a] text-xs sm:text-sm md:text-base uppercase">
@@ -76,7 +76,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
     );
   }
 
-  // If there&apos;s an error (property not found)
+  // If there's an error (property not found)
   if (error) {
     return (
       <main className="bg-[#f7f3f0] min-h-screen flex flex-col justify-center items-center">
@@ -146,8 +146,8 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
         </div>
 
         {/* Title Section Below Carousel */}
-        <div className="mt-20 mb-3 space-y-5 md:mt-30 text-center flex-col flex items-center">
-          <p className="font-medium text-xs mb-3 uppercase inline-block p-2 px-3 rounded-full text-white bg-[#b19a55]">
+        <div className="mt-10 mb-6 space-y-3 text-center flex-col flex items-center">
+          <p className="font-medium text-xs mb-2 uppercase inline-block p-2 px-3 rounded-full text-white bg-[#b19a55]">
             {property?.propertyType}
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl uppercase">
@@ -167,7 +167,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
       </section>
 
       {/* Social Share Section */}
-      <section className="px-5 md:px-10 lg:px-32 py-8 bg-[#f7f3f0] text-[#3a3225]">
+      <section className="px-5 md:px-10 lg:px-32 py-6 bg-[#f7f3f0] text-[#3a3225]">
         <div className="flex items-center gap-4">
           <span className="uppercase text-xs tracking-[2px]">Share</span>
           <div className="flex gap-3">
@@ -203,7 +203,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
       </section>
 
       {property?.propertyDescription && (
-        <section className="px-5 md:px-10 lg:px-32 py-16 bg-[#f7f3f0] text-[#3a3225]">
+        <section className="px-5 md:px-10 lg:px-32 py-8 bg-[#f7f3f0] text-[#3a3225]">
           <h3 className="text-xl md:text-3xl font-semibold tracking-widest uppercase text-[#3a3225] mb-4">
             Description
           </h3>
@@ -211,46 +211,55 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
         </section>
       )}
 
+
       {/* YouTube Video Section */}
       {property?.youTubeIframe && (
-        <section className="px-5 md:px-10 lg:px-32 py-16 bg-[#f7f3f0] text-[#3a3225]">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-widest uppercase">
+        <section className="px-5 md:px-10 lg:px-32 py-8 bg-[#f7f3f0] text-[#3a3225]">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-widest uppercase">
               Video
             </h2>
           </div>
-          <div className="w-full h-[400px]">
-            <iframe
-              width="560"
-              height="315"
-              src={property.youTubeIframe}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
+
+          <div className="flex justify-center">
+            <div className="w-full max-w-4xl aspect-video overflow-hidden rounded-lg shadow-lg">
+              <iframe
+                className="w-full h-full"
+                src={property.youTubeIframe}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </section>
       )}
 
+      
+
       {/* Map Location Section */}
       {property?.googleMapIframe && (
-        <section className="px-5 md:px-10 lg:px-32 py-16 bg-[#f7f3f0] text-[#3a3225]">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-widest uppercase">
+        <section className="px-5 md:px-10 lg:px-32 py-8 bg-[#f7f3f0] text-[#3a3225]">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-widest uppercase">
               Map Location
             </h2>
           </div>
-          <div className="w-full h-[400px]">
-            <iframe
-              src={property.googleMapIframe}
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
+          <div className="w-full max-w-full">
+            <div
+              className="relative w-full overflow-hidden rounded-lg"
+              style={{ paddingBottom: "56.25%" }}
+            >
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src={property.googleMapIframe}
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
         </section>
       )}

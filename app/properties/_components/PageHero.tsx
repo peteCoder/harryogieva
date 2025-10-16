@@ -10,7 +10,7 @@ const PageHero = ({
   return (
     <section
       style={{ backgroundImage: `url(${pageHeroBGImage})` }}
-      className={`bg-fixed bg-cover bg-center w-full min-h-[40vh] md:min-h-[60vh] lg:min-h-[80vh] relative`}
+      className={`bg-fixed bg-cover bg-center w-full min-h-[30vh] md:min-h-[40vh] lg:min-h-[50vh] relative`}
     >
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="absolute inset-0 z-10 w-full h-full flex justify-center items-center bottom-0">
