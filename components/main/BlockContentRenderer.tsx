@@ -4,21 +4,37 @@ import React from "react";
 import blockContentToReact from "@sanity/block-content-to-react"; // Sanity block content to React
 import Image from "next/image";
 
-// Define the correct type for BlockContent
+// Define precise types for BlockContent and its children
+// Correct types for content structure
+
+interface BlockContentChild {
+  _key: string;
+  _type: string;
+  marks: string[];
+  text: string;
+}
+
 interface BlockContent {
   _key: string;
   _type: string;
-  children: Array<{
-    _key: string;
-    _type: string;
-    marks: string[];
-    text: string;
-  }>;
-  markDefs: Array<{ _type: string; [key: string]: any }>;
+  children: BlockContentChild[];
+  markDefs: { _type: string; [key: string]: any }[]; // Typing markDefs with a more specific structure
   style: string;
   level?: number;
   listItem?: string;
 }
+
+export type BlogPostType = {
+  _id: string;
+  title: string;
+  author: string;
+  content: BlockContent[]; // Correctly typed content array
+  excerpt: string;
+  mainImage: string;
+  publishedAt: string;
+  slug: { _type: string; current: string };
+};
+
 
 const serializers = {
   types: {
@@ -107,7 +123,7 @@ const serializers = {
 };
 
 interface BlockContentRendererProps {
-  blocks: BlockContent[]; // Block content array from Sanity with proper typing
+  blocks: BlockContent[]; // Corrected type for blocks
 }
 
 const BlockContentRenderer: React.FC<BlockContentRendererProps> = ({

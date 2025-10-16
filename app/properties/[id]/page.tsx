@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import PropertyDetailClient from "../_components/PropertyDetailClient";
 import { getPropertyByID } from "@/actions/getPropertyByID";
 import { notFound } from "next/navigation";
-import { PropertyType } from "@/lib/types";
+// import { PropertyType } from "@/lib/types";
 
 type tParams = Promise<{ id: string }>;
 
