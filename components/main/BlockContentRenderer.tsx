@@ -7,6 +7,12 @@ import Image from "next/image";
 // Define precise types for BlockContent and its children
 // Correct types for content structure
 
+interface MarkDef {
+  _type: string;
+  _key: string;
+  [key: string]: unknown;
+}
+
 interface BlockContentChild {
   _key: string;
   _type: string;
@@ -18,7 +24,7 @@ interface BlockContent {
   _key: string;
   _type: string;
   children: BlockContentChild[];
-  markDefs: { _type: string; [key: string]: any }[]; // Typing markDefs with a more specific structure
+  markDefs: MarkDef[];
   style: string;
   level?: number;
   listItem?: string;
@@ -34,7 +40,6 @@ export type BlogPostType = {
   publishedAt: string;
   slug: { _type: string; current: string };
 };
-
 
 const serializers = {
   types: {
@@ -94,11 +99,11 @@ const serializers = {
       <ul className="list-disc pl-5 text-[#4a4336] text-sm md:text-base">
         {node.children.map((child) => {
           // Ensure child has the full structure expected by listItem
-          const fullChild = {
+          const fullChild: BlockContent = {
             ...child,
-            markDefs: child.markDefs || [],
-            style: "normal", // Mock style if missing
-            children: child.children || [],
+            markDefs: [],
+            style: "normal",
+            children: [child],
           };
           return serializers.types.listItem({ node: fullChild });
         })}
@@ -109,11 +114,11 @@ const serializers = {
       <ol className="list-decimal pl-5 text-[#4a4336] text-sm md:text-base">
         {node.children.map((child) => {
           // Ensure child has the full structure expected by listItem
-          const fullChild = {
+          const fullChild: BlockContent = {
             ...child,
-            markDefs: child.markDefs || [],
-            style: "normal", // Mock style if missing
-            children: child.children || [],
+            markDefs: [],
+            style: "normal",
+            children: [child],
           };
           return serializers.types.listItem({ node: fullChild });
         })}
