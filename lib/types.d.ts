@@ -1,3 +1,9 @@
+interface MarkDef {
+  _type: string;
+  _key: string;
+  [key: string]: unknown;
+}
+
 export type PropertyType = {
   _id: string;
   createdAt: string;
@@ -17,7 +23,7 @@ export type PropertyType = {
       marks: string[];
       text: string;
     }>;
-    markDefs: { type: string; value: string }[];
+    markDefs: MarkDef[];
     style: string;
     level?: number;
     listItem?: string;
@@ -39,7 +45,7 @@ export type BlogPostType = {
       marks: string[];
       text: string;
     }>;
-    markDefs: { type: string; value: string }[];
+    markDefs: MarkDef[];
     style: string;
     level?: number;
     listItem?: string;
