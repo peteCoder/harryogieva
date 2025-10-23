@@ -6,6 +6,7 @@ import Footer from "@/components/main/Footer";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { TestimonialType } from "@/lib/types";
 import Image from "next/image";
+import ScrollReveal from "@/components/main/ScrollReveal";
 
 // Skeleton loader component
 const SkeletonLoader = () => (
@@ -63,18 +64,21 @@ const Testimonials = () => {
 
       {/* HERO SECTION */}
       <section className="relative w-full h-[300px] flex items-center justify-center bg-[#eae4dc] text-center">
-        <div>
-          <h1 className="text-3xl md:text-5xl font-semibold uppercase tracking-wide">
-            Client Testimonials
-          </h1>
-          <p className="mt-3 text-[#5c4f3a] text-sm md:text-base">
-            Hear from our valued clients about their experience with Bond Real
-            Estate Group
-          </p>
-        </div>
+        <ScrollReveal>
+          <div>
+            <h1 className="text-3xl md:text-5xl font-semibold uppercase tracking-wide">
+              Client Testimonials
+            </h1>
+            <p className="mt-3 text-[#5c4f3a] text-sm md:text-base">
+              Hear from our valued clients about their experience with Bond Real
+              Estate Group
+            </p>
+          </div>
+        </ScrollReveal>
       </section>
 
       {/* TESTIMONIALS SECTION */}
+
       <section className="max-w-4xl mx-auto py-20 px-6 space-y-20">
         {loading ? (
           // Show skeletal loader while loading testimonials
@@ -89,26 +93,28 @@ const Testimonials = () => {
           // Show actual testimonials after loading
           testimonials.map((t) => (
             <div key={t._id} className="text-center">
-              {/* Testimonial Image */}
-              {t.image && (
-                <Image
-                  src={t.image}
-                  alt={t.name}
-                  className="w-16 h-16 rounded-full"
-                  width={64}
-                  height={64}
-                />
-              )}
+              <ScrollReveal>
+                {/* Testimonial Image */}
+                {t.image && (
+                  <Image
+                    src={t.image}
+                    alt={t.name}
+                    className="w-16 h-16 rounded-full"
+                    width={64}
+                    height={64}
+                  />
+                )}
 
-              {/* Content */}
-              <p className="text-sm md:text-base xl:text-lg leading-relaxed italic mb-5">
-                {t.testimonial}
-              </p>
+                {/* Content */}
+                <p className="text-sm md:text-base xl:text-lg leading-relaxed italic mb-5">
+                  {t.testimonial}
+                </p>
 
-              {/* Author */}
-              <p className="mt-4 text-[#5c4f3a] text-sm font-medium uppercase">
-                — {t.name}
-              </p>
+                {/* Author */}
+                <p className="mt-4 text-[#5c4f3a] text-sm font-medium uppercase">
+                  — {t.name}
+                </p>
+              </ScrollReveal>
             </div>
           ))
         )}

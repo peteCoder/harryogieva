@@ -1,9 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { ownerDetails } from "@/lib/constants";
+import ScrollReveal from "./ScrollReveal";
 
 const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
+  const WHATSAPP_NUMBER = process.env.WHATSAPP_NUMBER;
   return (
     <footer>
       {showFirstPart && (
@@ -14,28 +16,37 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
             <div className="absolute inset-0 bg-black/60"></div>
 
             <div className="relative z-10 w-full max-w-4xl px-4 sm:px-6 md:px-10 py-20 text-center text-white">
-              <h4 className="text-[#ccb091] tracking-wide font-medium text-sm sm:text-base mb-2">
-                GET IN TOUCH
-              </h4>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-10">
-                WORK WITH HARRY
-              </h1>
+              <ScrollReveal>
+                <h4 className="text-[#ccb091] tracking-wide font-medium text-sm sm:text-base mb-2">
+                  GET IN TOUCH
+                </h4>
+              </ScrollReveal>
 
-              <p className="max-w-xl mx-auto">
-                Passionate about connecting people with their dream homes across
-                Lagos, Abuja, and Benin City. Renowned for expertise, integrity,
-                and results in luxury real estate. Turning property goals into
-                lasting success stories, one client at a time.
-              </p>
+              <ScrollReveal>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-10">
+                  WORK WITH HARRY
+                </h1>
+              </ScrollReveal>
 
-              <div>
-                <Link
-                  href="/contact"
-                  className="border border-[#b19a55] mt-5 px-7 py-4 text-white bg-[#b19a55] hover:bg-transparent hover:text-[#b19a55] inline-block uppercase"
-                >
-                  Let&apos;s Connect
-                </Link>
-              </div>
+              <ScrollReveal>
+                <p className="max-w-xl mx-auto">
+                  Passionate about connecting people with their dream homes
+                  across Lagos, Abuja, and Benin City. Renowned for expertise,
+                  integrity, and results in luxury real estate. Turning property
+                  goals into lasting success stories, one client at a time.
+                </p>
+              </ScrollReveal>
+              <ScrollReveal>
+                <div>
+                  <Link
+                    href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                    target="_blank"
+                    className="border border-[#b19a55] mt-5 px-7 py-4 text-white bg-[#b19a55] hover:bg-transparent hover:text-[#b19a55] inline-block uppercase"
+                  >
+                    Let&apos;s Connect
+                  </Link>
+                </div>
+              </ScrollReveal>
             </div>
           </div>
         </>
@@ -146,7 +157,10 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
 
               <p className="text-base">
                 Copyright © {new Date().getFullYear()} |{" "}
-                <Link href="/" className="underline hover:text-[#ccb091]">
+                <Link
+                  href="/privacy-policy"
+                  className="underline hover:text-[#ccb091]"
+                >
                   Privacy Policy
                 </Link>
               </p>

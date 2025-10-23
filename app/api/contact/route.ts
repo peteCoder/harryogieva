@@ -18,28 +18,29 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // ✅ Save to Sanity
+    // Save to Sanity
     const newSubmission = await client.create({
       _type: "contact",
       ...body,
       submittedAt: new Date().toISOString(),
     });
 
-    // ✅ Configure Nodemailer transport
+    // Configure Nodemailer transport
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT) || 587,
-      secure: Number(process.env.SMTP_PORT) === 465, // ✅ SSL for 465, TLS for 587
+      // ✅ SSL for 465, TLS for 587
+      secure: Number(process.env.SMTP_PORT) === 465,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
     });
 
-    // ✅ Email HTML
+    // Email HTML
     const htmlContent = structuredHTML(name, email, subject, message);
 
-    // ✅ Send Email
+    // Send Email
     await transporter.sendMail({
       from: `"${name}" <${process.env.SMTP_USER}>`,
       to: process.env.CONTACT_RECEIVER,

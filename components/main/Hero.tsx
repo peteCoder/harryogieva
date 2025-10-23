@@ -31,7 +31,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.2 }}
-          className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 uppercase"
+          className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 uppercase"
         >
           Harry Ogieva
         </motion.h1>
@@ -40,7 +40,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.4 }}
-          className="text-xl md:text-2xl mb-8 text-gray-200 max-w-[900px] mx-auto"
+          className="text-xl md:text-2xl mb-8 text-gray-200 max-w-[900px] mx-auto uppercase"
         >
           And if you are looking to buy or sell real estate in Lagos, Abuja,
           Benin City and surrounding areas, I can help you.
