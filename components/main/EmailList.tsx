@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { BeatLoader } from "react-spinners";
 import { toast } from "sonner";

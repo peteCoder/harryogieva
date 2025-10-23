@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Scroll } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import PageHero from "../properties/_components/PageHero";
