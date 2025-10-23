@@ -11,6 +11,11 @@ interface MarkDef {
   [key: string]: unknown;
 }
 
+interface LinkMark extends MarkDef {
+  _type: "link";
+  href: string;
+}
+
 interface BlockContentChild {
   _key: string;
   _type: string;
@@ -39,6 +44,11 @@ export type BlogPostType = {
   slug: { _type: string; current: string };
 };
 
+// Helper function to check if a mark is a link mark
+const isLinkMark = (mark: MarkDef): mark is LinkMark => {
+  return mark._type === "link" && "href" in mark;
+};
+
 // Helper: render spans with marks (including links)
 const renderChildrenWithMarks = (node: BlockContent) => {
   return node.children.map((child) => {
@@ -47,11 +57,11 @@ const renderChildrenWithMarks = (node: BlockContent) => {
     if (child.marks && child.marks.length > 0) {
       child.marks.forEach((markKey) => {
         const mark = node.markDefs.find((def) => def._key === markKey);
-        if (mark?._type === "link" && (mark as any).href) {
+        if (mark && isLinkMark(mark)) {
           textElement = (
             <Link
               key={markKey}
-              href={(mark as any).href}
+              href={mark.href}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#b88b4a] hover:underline"
