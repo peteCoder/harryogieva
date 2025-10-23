@@ -34,8 +34,8 @@ const PrivacyPolicy = () => {
               1. Introduction
             </h2>
             <p className="text-sm md:text-base leading-relaxed text-[#4a4336]">
-              Welcome to <strong>Harry's Real Estate Listings</strong>. We value
-              your privacy and are committed to protecting your personal
+              Welcome to <strong>Harry&apos;s Real Estate Listings</strong>. We
+              value your privacy and are committed to protecting your personal
               information. This Privacy Policy explains how we collect, use, and
               safeguard your data when you visit our website, make inquiries, or
               engage our real estate services.
