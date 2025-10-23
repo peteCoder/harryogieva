@@ -20,8 +20,8 @@ const NotFoundPage = () => {
             Oops! Page Not Found
           </h2>
           <p className="text-[#4a4336] max-w-md mx-auto text-sm md:text-base">
-            It seems the page you're looking for doesn&apos;t exist or has been
-            moved. Let&apos;s help you find your way back home.
+            It seems the page you&apos;re looking for doesn&apos;t exist or has
+            been moved. Let&apos;s help you find your way back home.
           </p>
 
           <div className="mt-8">

@@ -55,9 +55,14 @@ const ContactPage = () => {
 
       toast.success("Message sent successfully!");
       reset();
-    } catch (error: any) {
+    } catch (error) {
       toast.dismiss();
-      toast.error(error.message || "Something went wrong. Please try again.");
+      // Safely narrow the error type
+      if (error instanceof Error) {
+        toast.error(error.message);
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
     }
   };
 
