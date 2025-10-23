@@ -169,7 +169,7 @@ const ContactPage = () => {
                     By providing your contact information, you acknowledge and
                     agree to our{" "}
                     <a
-                      href={"/private-policy"}
+                      href={"/privacy-policy"}
                       className="text-[#ccb091] underline cursor-pointer"
                     >
                       Privacy Policy
@@ -199,7 +199,11 @@ const ContactPage = () => {
             <hr className="border-gray-300 mb-6" />
             <ScrollReveal>
               <p className="font-semibold text-[#3b312b] mb-1">Harry Ogieva</p>
-              <p className="mb-2">{ownerDetails.phone}</p>
+              <div className="mb-2">
+                {ownerDetails.phone.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
               <p className="mb-2 text-[#b79b6c] underline cursor-pointer">
                 {ownerDetails.email}
               </p>

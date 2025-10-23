@@ -3,6 +3,7 @@ import React from "react";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { ownerDetails } from "@/lib/constants";
 import ScrollReveal from "./ScrollReveal";
+import { p } from "framer-motion/client";
 
 const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
   const WHATSAPP_NUMBER = process.env.WHATSAPP_NUMBER;
@@ -73,9 +74,14 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
                     CONTACT
                   </h3>
 
-                  {ownerDetails.phone && (
-                    <p className="text-sm">{ownerDetails.phone}</p>
-                  )}
+                  {/* {ownerDetails.phone && (
+                    <p className="text-sm">
+                      {ownerDetails.phone.map((ph, i) => (
+                        <span>{ph}</span>
+                      ))}
+                    </p>
+                  )} */}
+                  
                   {ownerDetails.email && (
                     <p className="text-sm underline">{ownerDetails.email}</p>
                   )}

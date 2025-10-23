@@ -34,11 +34,11 @@ const PrivacyPolicy = () => {
               1. Introduction
             </h2>
             <p className="text-sm md:text-base leading-relaxed text-[#4a4336]">
-              Welcome to <strong>Bond Real Estate Group</strong>. We value your
-              privacy and are committed to protecting your personal information.
-              This Privacy Policy explains how we collect, use, and safeguard
-              your data when you visit our website, make inquiries, or engage
-              our real estate services.
+              Welcome to <strong>Harry's Real Estate Listings</strong>. We value
+              your privacy and are committed to protecting your personal
+              information. This Privacy Policy explains how we collect, use, and
+              safeguard your data when you visit our website, make inquiries, or
+              engage our real estate services.
             </p>
           </div>
         </ScrollReveal>
@@ -152,12 +152,16 @@ const PrivacyPolicy = () => {
               exercise your data rights, please contact us at:
             </p>
 
-            <p className="text-sm md:text-base text-[#4a4336]">
-              📧 <strong>Email:</strong> {ownerDetails.email} <br />
-              📞 <strong>Phone:</strong> {ownerDetails.phone}
-              <br />
-              📍 <strong>Office:</strong> {ownerDetails.address}
-            </p>
+            <div className="text-sm md:text-base text-[#4a4336]">
+              <div className="text-2xl font-bold ">Email:</div>{" "}
+              {ownerDetails.email} <br />
+              <div className="text-2xl font-bold">Phone:</div>{" "}
+              {ownerDetails.phone.map((p, i) => {
+                return <p key={i}>{p}</p>;
+              })}
+              <div className="text-2xl font-bold">Office:</div>{" "}
+              {ownerDetails.address}
+            </div>
           </div>
         </ScrollReveal>
       </section>
