@@ -112,11 +112,11 @@ const BlogDetailClient = ({ id }: { id: string }) => {
           </h1>
           <p className="text-sm md:text-base">
             {blogPost?.author} |{" "}
-            {new Date(blogPost?.publishedAt  || "").toLocaleDateString()}
+            {new Date(blogPost?.publishedAt || "").toLocaleDateString()}
           </p>
 
           {/* Share Icons */}
-          <div className="flex items-center gap-3 mt-6">
+          <div className="flex items-center flex-col md:flex-row gap-3 mt-6">
             <span className="uppercase text-xs tracking-[2px]">Share</span>
             <div className="flex gap-3">
               <a

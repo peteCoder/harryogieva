@@ -29,7 +29,7 @@ export type PropertyType = {
     listItem?: string;
   }[];
   propertyType: string;
-  youTubeIframe: string;
+  facebookIframeURL: string;
 };
 
 export type BlogPostType = {

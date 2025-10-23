@@ -28,7 +28,7 @@ export async function GET(
         isFeatured,
         createdAt,
         propertyDescription, // Block content for description (including images in block)
-        youTubeIframe,
+        facebookIframeURL,
         googleMapIframe,
       }[0]`;
 

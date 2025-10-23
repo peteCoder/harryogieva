@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Linkedin, Mail } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import PageHero from "../properties/_components/PageHero";
@@ -80,10 +80,10 @@ const AboutPage = () => {
               <Linkedin className="w-4 h-4" />
             </Link>
             <Link
-              href={`mailto:${ownerDetails.email}`}
+              href={`mailto:${ownerDetails.instagram}`}
               className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
             >
-              <Mail className="w-4 h-4" />
+              <Instagram className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -101,59 +101,74 @@ const AboutPage = () => {
 
         <div className="space-y-5 text-[#4a4336] text-sm md:text-base leading-relaxed">
           <p>
-            I take immense pride in helping individuals and families find their
-            ideal homes in the vibrant cities of Lagos, Abuja, Benin City, and
-            the surrounding regions. These areas offer a unique blend of
-            culture, opportunity, and comfort, and I am honored to be part of
-            this community.
+            I am delighted to help individuals and families find their
+            sought-after homes in the vibrant cities of Lagos, Abuja, Benin
+            City, and the surrounding areas. These areas offer a distinctive mix
+            of belief, opportunity, and leisure, and I hold great respect for
+            being a part of this community.
           </p>
+
           <p>
-            My journey into real estate began with my passion for connecting
-            people with the right properties. After obtaining my license, I
-            quickly grew to be a trusted advisor in the industry. With years of
-            experience in both residential and commercial real estate, I&apos;ve
+            My experience in real estate began with my enthusiasm for connecting
+            people with the right properties. After receiving my permit, I
+            quickly became a trusted consultant in the industry. With years of
+            experience in both residential and commercial real estate, I have
             earned a reputation for my attention to detail and commitment to
             delivering results.
           </p>
+
           <p>
-            Over the years, I&apos;ve worked tirelessly to stay ahead of market
-            trends, which has allowed me to guide clients through the
-            complexities of real estate transactions with ease. I&apos;m proud
-            to have achieved significant milestones in my career, including
-            multiple awards for excellence and consistent top producer rankings.
+            Over the years, I have worked tirelessly to stay ahead of market
+            trends, allowing me to guide clients smoothly through the
+            complexities of real estate transactions. I am proud of the
+            remarkable achievements I have accomplished in my career.
           </p>
+
           <p>
-            With an extensive network and an unwavering dedication to my
-            clients, I offer a comprehensive approach to buying, selling, and
-            investing in real estate. I pride myself on providing personalized
-            services, leveraging the latest tools and technologies, and making
-            each transaction smooth and seamless.
+            With a substantial network and unwavering dedication to my clients,
+            I offer a comprehensive approach to buying, selling, and investing
+            in real estate. I pride myself on providing individualized services,
+            utilizing the latest tools and technologies, and ensuring each
+            transaction is smooth and seamless.
           </p>
+
           <p>
-            I&apos;m excited to now be part of the prestigious team at eXp
-            Realty, where I continue to expand my reach and offer unmatched
-            services in the luxury real estate market. Through this partnership,
-            I provide my clients access to a vast array of resources, from
-            cutting-edge marketing tools to global connections.
+            I am excited to now be part of the esteemed team at Tenprocon and
+            Gosa Property Limited, where I continue to expand my reach and
+            provide unparalleled services to the luxury real estate market.
+            Through this partnership, I offer my clients access to a wide range
+            of resources—from cutting-edge marketing tools to global
+            connections.
           </p>
+
           <p>
-            My licenses are active in Lagos, Abuja, and Benin City, and I am
-            constantly working to improve my knowledge and skills to better
-            serve my clients. I work diligently to ensure that every transaction
+            My permits are active in Lagos, Abuja, and Benin City, and I am
+            continuously working to improve my knowledge and skills to better
+            serve my clients. I work diligently to ensure that each transaction
             is not only successful but also a positive experience for everyone
             involved.
           </p>
+
           <p>
-            Outside of real estate, I am deeply involved in local charity work,
-            supporting educational programs and community-building initiatives.
-            I am passionate about contributing to the region&apos;s growth and
-            helping others achieve their dreams, both in life and in property
+            In addition to real estate, I am deeply involved in local
+            educational programs and community-building initiatives. I am
+            passionate about contributing to the development of the region and
+            helping others achieve their dreams—both in life and in property
             ownership.
           </p>
+
           <p>
-            Additionally, I have served on various industry boards, including
-            the Real Estate Board of Nigeria, where I&apos;ve contributed to
-            shaping industry standards and fostering growth.
+            When I am not helping clients find their ideal home, you can find me
+            enjoying outdoor activities such as walking, jogging, and boating.
+            My love for adventure, combined with a deep commitment to my
+            clients&apos; success, has made me a leader in the real estate
+            field.
+          </p>
+
+          <p>
+            Whether you are buying your first home, investing in luxury
+            property, or seeking expert advice on the real estate market, I am
+            here to guide you every step of the way.
           </p>
         </div>
       </section>

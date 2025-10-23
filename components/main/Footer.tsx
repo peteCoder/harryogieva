@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Facebook, Linkedin, Mail } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 import { ownerDetails } from "@/lib/constants";
 
 const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
@@ -22,9 +22,10 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
               </h1>
 
               <p className="max-w-xl mx-auto">
-                With the passion, dedication, and resources to help his clients
-                reach their buying and selling goals. With you every step of the
-                way.
+                Passionate about connecting people with their dream homes across
+                Lagos, Abuja, and Benin City. Renowned for expertise, integrity,
+                and results in luxury real estate. Turning property goals into
+                lasting success stories, one client at a time.
               </p>
 
               <div>
@@ -105,19 +106,19 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
             {/* Social Icons */}
             <div className="flex items-center space-x-4">
               <Link
-                href="/"
+                href={ownerDetails.facebook}
                 className="border border-[#ccb091] p-2 rounded-full hover:bg-[#ccb091] hover:text-[#352c28] transition"
               >
                 <Facebook className="w-4 h-4" />
               </Link>
               <Link
-                href="/"
+                href={ownerDetails.instagram}
                 className="border border-[#ccb091] p-2 rounded-full hover:bg-[#ccb091] hover:text-[#352c28] transition"
               >
-                <Mail className="w-4 h-4" />
+                <Instagram className="w-4 h-4" />
               </Link>
               <Link
-                href="/"
+                href={ownerDetails.linkedin}
                 className="border border-[#ccb091] p-2 rounded-full hover:bg-[#ccb091] hover:text-[#352c28] transition"
               >
                 <Linkedin className="w-4 h-4" />

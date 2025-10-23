@@ -211,22 +211,21 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
         </section>
       )}
 
-
       {/* YouTube Video Section */}
-      {property?.youTubeIframe && (
+      {property?.facebookIframeURL && (
         <section className="px-5 md:px-10 lg:px-32 py-8 bg-[#f7f3f0] text-[#3a3225]">
-          <div className="text-center mb-6">
+          <div className="text-left mb-6">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-widest uppercase">
               Video
             </h2>
           </div>
 
-          <div className="flex justify-center">
-            <div className="w-full max-w-4xl aspect-video overflow-hidden rounded-lg shadow-lg">
+          <div className="flex">
+            <div className="w-full max-w-sm aspect-[9/16] overflow-hidden rounded-lg shadow-lg">
               <iframe
                 className="w-full h-full"
-                src={property.youTubeIframe}
-                title="YouTube video player"
+                src={property.facebookIframeURL}
+                title="Facebook video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -237,12 +236,10 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
         </section>
       )}
 
-      
-
       {/* Map Location Section */}
       {property?.googleMapIframe && (
         <section className="px-5 md:px-10 lg:px-32 py-8 bg-[#f7f3f0] text-[#3a3225]">
-          <div className="text-center mb-6">
+          <div className="text-left mb-6">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-widest uppercase">
               Map Location
             </h2>

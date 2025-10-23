@@ -27,41 +27,46 @@ const AboutOwner = () => {
 
           <div className="space-y-6 mt-5 leading-relaxed text-gray-700">
             <p>
-              With years of experience and an unmatched passion for real estate,
-              Harry Ogieva has built a reputation as one of the most trusted and
-              knowledgeable real estate professionals in Nigeria. Currently, he
-              is affiliated with eXp Realty, the world&apos;s fastest-growing global
-              real estate brokerage.
+              I am passionate about helping individuals and families find their
+              dream homes across Lagos, Abuja, Benin City, and beyond. These
+              vibrant cities offer a unique blend of culture, opportunity, and
+              lifestyle, and I&apos;m proud to be part of these thriving
+              communities.
             </p>
+
             <p>
-              Harry&apos;s expertise spans multiple regions, including Lagos, Abuja,
-              and Benin City. His local market insight, paired with valuable
-              international connections, empowers his clients to make
-              well-informed decisions in an ever-evolving real estate market. As
-              a dedicated and driven associate broker, he is part of the
-              exclusive eXp Luxury program, which offers advanced tools,
-              technology, and training to elevate his clients&apos; experiences.
+              My journey in real estate began with a passion for connecting
+              people to the right properties. Over the years, I&apos;ve built a
+              strong reputation for attention to detail, professionalism, and
+              delivering results across both residential and commercial markets.
             </p>
+
             <p>
-              A Certified Residential Specialist (CRS) and a Graduate of the
-              Realtor Institute, Harry&apos;s licenses are active across multiple
-              regions, including Lagos and Abuja. His professionalism, coupled
-              with his vast knowledge of the industry, has earned him multiple
-              Top Producer awards and a long list of satisfied clients.
+              With a wide network and commitment to excellence, I provide a
+              seamless experience in buying, selling, and investing in real
+              estate. I combine personalized service with modern tools and
+              strategies to ensure every transaction is smooth and successful.
             </p>
+
             <p>
-              In addition to his accolades in real estate, Harry remains
-              grounded and involved in the community, frequently supporting
-              local charities, schools, and community events. When he&apos;s not
-              helping clients find their dream homes, you can find him enjoying
-              outdoor activities such as biking, hiking, and sailing. His love
-              for adventure, combined with a deep commitment to his clients&apos;
-              success, makes him a standout in the real estate field.
+              As part of the esteemed Tenprocon and Gosa Property Limited team,
+              I offer clients access to exclusive resources, global connections,
+              and luxury market expertise. My permits cover Lagos, Abuja, and
+              Benin City, and I continue to refine my skills to better serve my
+              clients.
             </p>
+
             <p>
-              Whether you&apos;re buying your first home, investing in a luxury
-              property, or seeking expert advice on real estate markets, Harry
-              Ogieva is here to guide you every step of the way.
+              Beyond real estate, I&apos;m actively involved in community and
+              educational initiatives, contributing to regional growth and
+              helping others achieve their dreams. When I&apos;m not assisting
+              clients, I enjoy outdoor activities such as walking, jogging, and
+              boating.
+            </p>
+
+            <p>
+              Whether you&apos;re buying your first home or investing in luxury
+              property, I&apos;m here to guide you every step of the way.
             </p>
 
             <div className="flex gap-3 item-center flex-col sm:flex-row">
