@@ -1,0 +1,22 @@
+{
+  "name": "Harry Ogieva Real Estate",
+  "short_name": "Harry Ogieva",
+  "description": "Luxury real estate services, property investments, and premium homes across Nigeria — by Harry Ogieva.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#b19a55",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

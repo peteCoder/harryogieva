@@ -156,6 +156,13 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
           <div className="flex justify-center items-center gap-3 text-[#5c4f3a] text-xs sm:text-sm md:text-base uppercase">
             <span>{property?.excerpt}</span>
           </div>
+          <div className="text-[#5c4f3a] font-extrabold">
+            {property?.forSale ? (
+              <span>For Sale</span>
+            ) : (
+              <span>Not For Sale</span>
+            )}
+          </div>
 
           <Link
             href={"/contact"}

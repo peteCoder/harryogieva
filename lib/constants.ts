@@ -1,15 +1,16 @@
 export const ownerDetails = {
   name: "Harry Ogieva",
-  email: "harryrealtor@harryogieva.com",
+  email: "harryosa234@gmail.com",
   domain: "https://www.harryogieva.com",
   phone: ["09038454760", "08115781007"],
   address:
     "52, Iduhon Road, Off Upper Sakponba Road, Egba, Benin City, Edo State, Nigeria.",
   facebook: "https://www.facebook.com/profile.php?id=61558830723893",
-  instagram: "/",
-  twitter: "/",
-  linkedin: "/",
+  instagram: "",
+  twitter: "",
+  linkedin: "",
   telegram: "https://t.me/@Theharris9",
+  whatsapp: "https://wa.me/2349038454760",
 };
 
 export const listings = [

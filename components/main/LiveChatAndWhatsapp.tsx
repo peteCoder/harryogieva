@@ -1,12 +1,12 @@
+import { ownerDetails } from "@/lib/constants";
 import Image from "next/image";
 
 export default function LiveChatAndWhatsapp() {
-  const WHATSAPP_NUMBER = process.env.WHATSAPP_NUMBER;
 
   return (
     <div>
       <a
-        href={`https://wa.me/${WHATSAPP_NUMBER}`}
+        href={ownerDetails.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50"

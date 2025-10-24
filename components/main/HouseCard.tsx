@@ -38,13 +38,13 @@ const HouseCard = ({
           />
         </div>
 
-        {!forSale ? (
+        {forSale ? (
           <span className="absolute top-4 right-4 bg-[#b19a55] text-white text-xs font-semibold px-3 py-1 uppercase">
             For Sale
           </span>
         ) : (
           <span className="absolute top-4 right-4 bg-[#b19a55] text-white text-xs font-semibold px-3 py-1 uppercase">
-            Sold
+            Not For Sale
           </span>
         )}
       </div>

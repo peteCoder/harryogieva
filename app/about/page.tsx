@@ -3,6 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import {
+  FaTelegramPlane,
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaWhatsapp,
+  FaMailBulk,
+} from "react-icons/fa";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import PageHero from "../properties/_components/PageHero";
@@ -45,14 +54,18 @@ const AboutPage = () => {
           <ScrollReveal>
             <div className="space-y-3 text-sm md:text-base">
               <div>
-                <h4 className="font-semibold uppercase text-xs text-[#b19a55] mb-1">
+                <h4 className="font-semibold uppercase text-lg text-[#b19a55] mb-1">
                   Primary Phone
                 </h4>
-                <p>{ownerDetails.phone}</p>
+                <p className="flex flex-col">
+                  {ownerDetails.phone.map((p, i) => (
+                    <span key={i}>{p}</span>
+                  ))}
+                </p>
               </div>
 
               <div>
-                <h4 className="font-semibold uppercase text-xs text-[#b19a55] mb-1">
+                <h4 className="font-semibold uppercase text-lg text-[#b19a55] mb-1">
                   Email
                 </h4>
                 <Link
@@ -64,7 +77,7 @@ const AboutPage = () => {
               </div>
 
               <div>
-                <h4 className="font-semibold uppercase text-xs text-[#b19a55] mb-1">
+                <h4 className="font-semibold uppercase text-lg text-[#b19a55] mb-1">
                   Address
                 </h4>
                 <div className="hover:underline">{ownerDetails.address}</div>
@@ -75,24 +88,64 @@ const AboutPage = () => {
           {/* Socials */}
           <ScrollReveal>
             <div className="flex justify-center md:justify-start gap-4 pt-4">
-              <Link
-                href={ownerDetails.facebook}
-                className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
-              >
-                <Facebook className="w-4 h-4" />
-              </Link>
-              <Link
-                href={ownerDetails.linkedin}
-                className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
-              >
-                <Linkedin className="w-4 h-4" />
-              </Link>
-              <Link
-                href={`mailto:${ownerDetails.instagram}`}
-                className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
-              >
-                <Instagram className="w-4 h-4" />
-              </Link>
+              {ownerDetails.facebook && (
+                <Link
+                  href={ownerDetails.facebook}
+                  className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
+                >
+                  <FaFacebook className="w-4 h-4" />
+                </Link>
+              )}
+
+              {ownerDetails.linkedin && (
+                <Link
+                  href={ownerDetails.linkedin}
+                  className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
+                >
+                  <FaLinkedin className="w-4 h-4" />
+                </Link>
+              )}
+
+              {ownerDetails.instagram && (
+                <Link
+                  href={`${ownerDetails.instagram}`}
+                  className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
+                >
+                  <FaInstagram className="w-4 h-4" />
+                </Link>
+              )}
+              {ownerDetails.email && (
+                <Link
+                  href={`mailto:${ownerDetails.email}`}
+                  className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
+                >
+                  <FaMailBulk className="w-4 h-4" />
+                </Link>
+              )}
+              {ownerDetails.telegram && (
+                <Link
+                  href={`${ownerDetails.telegram}`}
+                  className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
+                >
+                  <FaTelegramPlane className="w-4 h-4" />
+                </Link>
+              )}
+              {ownerDetails.twitter && (
+                <Link
+                  href={`${ownerDetails.twitter}`}
+                  className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
+                >
+                  <FaTwitter className="w-4 h-4" />
+                </Link>
+              )}
+              {ownerDetails.whatsapp && (
+                <Link
+                  href={`${ownerDetails.whatsapp}`}
+                  className="w-9 h-9 flex items-center justify-center border border-[#b19a55] rounded-full hover:bg-[#b19a55] hover:text-white transition-all"
+                >
+                  <FaWhatsapp className="w-4 h-4" />
+                </Link>
+              )}
             </div>
           </ScrollReveal>
         </div>

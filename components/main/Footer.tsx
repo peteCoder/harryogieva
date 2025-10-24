@@ -1,9 +1,14 @@
 import Link from "next/link";
 import React from "react";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { ownerDetails } from "@/lib/constants";
 import ScrollReveal from "./ScrollReveal";
-import { p } from "framer-motion/client";
+import {
+  FaTelegramPlane,
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
   const WHATSAPP_NUMBER = process.env.WHATSAPP_NUMBER;
@@ -57,7 +62,7 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
       <div className="bg-[#352c28] text-white py-20 px-6 sm:px-10 md:px-20 min-h-screen">
         <div className="container px-4 md:px-8 mx-auto">
           {/* Top Row */}
-          <div className="flex flex-col md:flex-row justify-between gap-10 border-b border-gray-700 pb-10">
+          <div className="flex flex-col md:flex-row flex-wrap justify-between gap-10 border-b border-gray-700 pb-10">
             {/* Logo + Brand */}
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-[#ccb091] font-semibold text-3xl">
@@ -65,29 +70,28 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
               </div>
             </div>
 
-            {/* Contact Info */}
-
-            {ownerDetails.phone ||
-              (ownerDetails.email && (
-                <div>
-                  <h3 className="font-semibold text-[#ccb091] uppercase mb-3 text-sm">
-                    CONTACT
-                  </h3>
-
-                  {/* {ownerDetails.phone && (
-                    <p className="text-sm">
-                      {ownerDetails.phone.map((ph, i) => (
-                        <span>{ph}</span>
-                      ))}
-                    </p>
-                  )} */}
-                  
-                  {ownerDetails.email && (
-                    <p className="text-sm underline">{ownerDetails.email}</p>
-                  )}
-                </div>
-              ))}
-
+            {/* Email */}
+            {ownerDetails.email && (
+              <div>
+                <h3 className="font-semibold text-[#ccb091] uppercase mb-3 text-sm">
+                  Email
+                </h3>
+                <p className="text-sm flex flex-col">{ownerDetails.email}</p>
+              </div>
+            )}
+            {/* Email */}
+            {ownerDetails.phone && (
+              <div>
+                <h3 className="font-semibold text-[#ccb091] uppercase mb-3 text-sm">
+                  Phone
+                </h3>
+                <p className="text-sm flex flex-col">
+                  {ownerDetails.phone.map((p, i) => (
+                    <span key={i}>{p}</span>
+                  ))}
+                </p>
+              </div>
+            )}
             {/* Address */}
             {ownerDetails.address && (
               <div>
@@ -122,24 +126,53 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
 
             {/* Social Icons */}
             <div className="flex items-center space-x-4">
-              <Link
-                href={ownerDetails.facebook}
-                className="border border-[#ccb091] p-2 rounded-full hover:bg-[#ccb091] hover:text-[#352c28] transition"
-              >
-                <Facebook className="w-4 h-4" />
-              </Link>
-              <Link
-                href={ownerDetails.instagram}
-                className="border border-[#ccb091] p-2 rounded-full hover:bg-[#ccb091] hover:text-[#352c28] transition"
-              >
-                <Instagram className="w-4 h-4" />
-              </Link>
-              <Link
-                href={ownerDetails.linkedin}
-                className="border border-[#ccb091] p-2 rounded-full hover:bg-[#ccb091] hover:text-[#352c28] transition"
-              >
-                <Linkedin className="w-4 h-4" />
-              </Link>
+              {ownerDetails.facebook && (
+                <Link
+                  href={ownerDetails.facebook}
+                  className="border border-[#ccb091] p-2 rounded-full hover:bg-[#ccb091] hover:text-[#352c28] transition"
+                  target="_blank"
+                >
+                  <FaFacebook className="w-4 h-4" />
+                </Link>
+              )}
+              {ownerDetails.instagram && (
+                <Link
+                  href={ownerDetails.instagram}
+                  className="border border-[#ccb091] p-2 rounded-full hover:bg-[#ccb091] hover:text-[#352c28] transition"
+                  target="_blank"
+                >
+                  <FaInstagram className="w-4 h-4" />
+                </Link>
+              )}
+              {ownerDetails.whatsapp && (
+                <Link
+                  href={ownerDetails.whatsapp}
+                  className="border border-[#ccb091] p-2 rounded-full hover:bg-[#ccb091] hover:text-[#352c28] transition"
+                  target="_blank"
+                >
+                  <FaWhatsapp className="w-4 h-4" />
+                </Link>
+              )}
+
+              {ownerDetails.linkedin && (
+                <Link
+                  href={ownerDetails.linkedin}
+                  className="border border-[#ccb091] p-2 rounded-full hover:bg-[#ccb091] hover:text-[#352c28] transition"
+                  target="_blank"
+                >
+                  <FaLinkedin className="w-4 h-4" />
+                </Link>
+              )}
+
+              {ownerDetails.telegram && (
+                <Link
+                  href={ownerDetails.telegram}
+                  className="border border-[#ccb091] p-2 rounded-full hover:bg-[#ccb091] hover:text-[#352c28] transition"
+                  target="_blank"
+                >
+                  <FaTelegramPlane className="w-4 h-4" />
+                </Link>
+              )}
             </div>
           </div>
 

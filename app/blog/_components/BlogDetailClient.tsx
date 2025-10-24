@@ -5,10 +5,11 @@ import Footer from "@/components/main/Footer";
 import Navbar from "@/components/main/Navbar";
 import RecentBlogPosts from "@/components/main/RecentBlogPosts";
 import { BlogPostType } from "@/lib/types";
-import { Facebook, Mail, Twitter } from "lucide-react";
+import { Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { FaFacebook, FaTwitter } from "react-icons/fa";
 
 const BlogDetailClient = ({ id }: { id: string }) => {
   const [blogPost, setBlogPost] = useState<BlogPostType | null>(null); // State for blog post data
@@ -126,7 +127,7 @@ const BlogDetailClient = ({ id }: { id: string }) => {
                 target="_blank"
                 className="p-2 rounded-full bg-white/10 hover:bg-[#b19a55] transition"
               >
-                <Facebook size={16} />
+                <FaFacebook size={16} />
               </a>
               <a
                 href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
@@ -135,7 +136,7 @@ const BlogDetailClient = ({ id }: { id: string }) => {
                 target="_blank"
                 className="p-2 rounded-full bg-white/10 hover:bg-[#b19a55] transition"
               >
-                <Twitter size={16} />
+                <FaTwitter size={16} />
               </a>
               <a
                 href={`https://api.whatsapp.com/send?text=${encodeURIComponent(

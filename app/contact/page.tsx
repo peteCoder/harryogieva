@@ -2,7 +2,14 @@
 
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import {
+  FaTelegramPlane,
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import PageHero from "../properties/_components/PageHero";
@@ -79,7 +86,7 @@ const ContactPage = () => {
 
         <div className="w-full h-[400px]">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.528960787077!2d-116.55063632342727!3d48.2765782712441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5361f2a55dc07e8d%3A0x7a5b06d13f17b90!2s414%20Church%20St%20%23201%2C%20Sandpoint%2C%20ID%2083864%2C%20USA!5e0!3m2!1sen!2sus!4v1696962429336!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126907.54024258906!2d5.538651943359384!3d6.282045500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1040d7b046cb74eb%3A0x487d1527e77aa5bd!2sEgba%20community!5e0!3m2!1sen!2sng!4v1761295438622!5m2!1sen!2sng"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -216,16 +223,18 @@ const ContactPage = () => {
                   <a
                     href={ownerDetails.facebook}
                     className="w-9 h-9 border border-[#ccb091] rounded-full flex items-center justify-center hover:bg-[#ccb091] hover:text-[#3b312b]"
+                    target="_blank"
                   >
-                    <Facebook size={16} />
+                    <FaFacebook size={16} />
                   </a>
                 )}
                 {ownerDetails.linkedin && (
                   <a
                     href={ownerDetails.linkedin}
                     className="w-9 h-9 border border-[#ccb091] rounded-full flex items-center justify-center hover:bg-[#ccb091] hover:text-[#3b312b]"
+                    target="_blank"
                   >
-                    <Linkedin size={16} />
+                    <FaLinkedin size={16} />
                   </a>
                 )}
 
@@ -233,16 +242,36 @@ const ContactPage = () => {
                   <a
                     href={ownerDetails.instagram}
                     className="w-9 h-9 border border-[#ccb091] rounded-full flex items-center justify-center hover:bg-[#ccb091] hover:text-[#3b312b]"
+                    target="_blank"
                   >
-                    <Instagram size={16} />
+                    <FaInstagram size={16} />
+                  </a>
+                )}
+                {ownerDetails.whatsapp && (
+                  <a
+                    href={ownerDetails.whatsapp}
+                    className="w-9 h-9 border border-[#ccb091] rounded-full flex items-center justify-center hover:bg-[#ccb091] hover:text-[#3b312b]"
+                    target="_blank"
+                  >
+                    <FaWhatsapp size={16} />
+                  </a>
+                )}
+                {ownerDetails.telegram && (
+                  <a
+                    href={ownerDetails.telegram}
+                    className="w-9 h-9 border border-[#ccb091] rounded-full flex items-center justify-center hover:bg-[#ccb091] hover:text-[#3b312b]"
+                    target="_blank"
+                  >
+                    <FaTelegramPlane size={16} />
                   </a>
                 )}
                 {ownerDetails.twitter && (
                   <a
                     href={ownerDetails.twitter}
                     className="w-9 h-9 border border-[#ccb091] rounded-full flex items-center justify-center hover:bg-[#ccb091] hover:text-[#3b312b]"
+                    target="_blank"
                   >
-                    <Twitter size={16} />
+                    <FaTwitter size={16} />
                   </a>
                 )}
               </div>
