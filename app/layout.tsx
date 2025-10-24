@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     url: "https://www.harryogieva.com",
     siteName: "Harry Ogieva Real Estate",
     type: "website",
-    locale: "en_NG",
+    locale: "en_US",
     images: [
       {
         url: "https://www.harryogieva.com/og-image.jpg",
@@ -80,7 +80,7 @@ export default function RootLayout({
       <body className={`${spinnaker.variable} font-spinnaker antialiased`}>
         {children}
 
-        {/* 🎨 Customized Sonner Toaster */}
+        {/* Customized Sonner Toaster */}
         <Toaster
           richColors
           position="top-center"
