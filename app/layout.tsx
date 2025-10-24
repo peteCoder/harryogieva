@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Spinnaker } from "next/font/google";
 import "./globals.css";
 import LiveChatAndWhatsapp from "@/components/main/LiveChatAndWhatsapp";
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     locale: "en_NG",
     images: [
       {
-        url: "https://www.harryogieva.com/og-image.jpg", // Replace with your OG image
+        url: "https://www.harryogieva.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Harry Ogieva Real Estate - Luxury Homes and Properties in Nigeria",
@@ -62,9 +62,12 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
-
-  themeColor: "#b19a55",
   manifest: "/site.webmanifest",
+};
+
+// themeColor moved to viewport
+export const viewport: Viewport = {
+  themeColor: "#b19a55",
 };
 
 export default function RootLayout({
