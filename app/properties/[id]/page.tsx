@@ -54,3 +54,5 @@ const PropertyDetails = async (props: { params: tParams }) => {
 };
 
 export default PropertyDetails;
+
+

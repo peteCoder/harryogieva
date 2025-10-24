@@ -6,12 +6,20 @@ import Link from "next/link";
 interface HouseCardProps {
   id: string;
   name: string;
-  image: string; // Assuming image is the first image in the images array
-  excerpt: string; // Using excerpt as price in your case
-  location: string; // Location
+  image: string;
+  excerpt: string;
+  location: string;
   propertyType: string;
   forSale: boolean;
 }
+
+// Helper function to truncate long excerpts
+const truncateText = (text: string, maxLength: number): string => {
+  if (!text) return "";
+  return text.length > maxLength
+    ? text.slice(0, maxLength).trim() + "..."
+    : text;
+};
 
 const HouseCard = ({
   id,
@@ -38,26 +46,23 @@ const HouseCard = ({
           />
         </div>
 
-        {forSale ? (
-          <span className="absolute top-4 right-4 bg-[#b19a55] text-white text-xs font-semibold px-3 py-1 uppercase">
-            For Sale
-          </span>
-        ) : (
-          <span className="absolute top-4 right-4 bg-[#b19a55] text-white text-xs font-semibold px-3 py-1 uppercase">
-            Not For Sale
-          </span>
-        )}
+        <span className="absolute top-4 right-4 bg-[#b19a55] text-white text-xs font-semibold px-3 py-1 uppercase">
+          {forSale ? "For Sale" : "Not For Sale"}
+        </span>
       </div>
 
       <div className="p-5 text-left">
-        <p className="text-2xl font-semibold text-[#3a2e25] mb-1 uppercase">
-          {name}
-        </p>
-        <p className="text-[#3a2e25] font-medium text-sm mb-3 uppercase">
-          {excerpt}
-        </p>
         <p className="font-medium text-xs mb-3 uppercase inline-block p-2 px-3 rounded-full text-white bg-[#b19a55]">
           {propertyType}
+        </p>
+
+        <p className="text-lg font-semibold text-[#3a2e25] mb-1 uppercase">
+          {name}
+        </p>
+
+        {/* Excerpt now automatically truncates after 150 characters */}
+        <p className="text-[#3a2e25] text-xs mb-3">
+          {truncateText(excerpt, 150)}
         </p>
       </div>
     </Link>

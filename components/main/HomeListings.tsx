@@ -80,7 +80,7 @@ const HomeListings = () => {
                       </CarouselItem>
                     ))
                 : // Show actual properties
-                  properties.map((listing, index) => (
+                  properties?.slice(0, 4)?.map((listing, index) => (
                     <CarouselItem
                       key={index}
                       className="basis-full sm:basis-1/2 md:basis-1/3"

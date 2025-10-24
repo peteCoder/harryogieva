@@ -153,7 +153,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
           <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl uppercase">
             {property?.name}
           </h2>
-          <div className="flex justify-center items-center gap-3 text-[#5c4f3a] text-xs sm:text-sm md:text-base uppercase">
+          <div className="flex justify-center items-center gap-3 max-w-[700px] mx-auto text-[#5c4f3a] text-xs sm:text-sm md:text-base">
             <span>{property?.excerpt}</span>
           </div>
           <div className="text-[#5c4f3a] font-extrabold">
@@ -166,7 +166,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
 
           <Link
             href={"/contact"}
-            className="border border-[#b19a55] uppercase px-7 py-4 text-white bg-[#b19a55] hover:bg-transparent hover:text-[#b19a55] sm:w-fit flex items-center justify-center"
+            className="border border-[#b19a55] rounded-full uppercase px-7 py-4 text-white bg-[#b19a55] hover:bg-transparent hover:text-[#b19a55] sm:w-fit flex items-center justify-center"
           >
             Inquire Now
           </Link>
@@ -210,7 +210,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
       </section>
 
       {property?.propertyDescription && (
-        <section className="px-5 md:px-10 lg:px-32 py-8 bg-[#f7f3f0] text-[#3a3225]">
+        <section className="px-5 md:px-10 lg:px-32 py-5 bg-[#f7f3f0] text-[#3a3225]">
           <h3 className="text-xl md:text-3xl font-semibold tracking-widest uppercase text-[#3a3225] mb-4">
             Description
           </h3>
