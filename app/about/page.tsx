@@ -11,7 +11,6 @@ import {
   FaWhatsapp,
   FaMailBulk,
 } from "react-icons/fa";
-import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import PageHero from "../properties/_components/PageHero";
 
@@ -21,7 +20,7 @@ import ScrollReveal from "@/components/main/ScrollReveal";
 const AboutPage = () => {
   return (
     <main className="bg-[#f7f3f0] text-[#3a3225]">
-      <Navbar isDefaultBg />
+      
       <div className="mt-20"></div>
       <PageHero
         pageTitle="Meet Harry"

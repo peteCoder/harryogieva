@@ -2,7 +2,6 @@
 
 import BlockContentRenderer from "@/components/main/BlockContentRenderer";
 import Footer from "@/components/main/Footer";
-import Navbar from "@/components/main/Navbar";
 import RecentBlogPosts from "@/components/main/RecentBlogPosts";
 import { BlogPostType } from "@/lib/types";
 import { Mail } from "lucide-react";
@@ -42,7 +41,7 @@ const BlogDetailClient = ({ id }: { id: string }) => {
   if (loading) {
     return (
       <div className="bg-[#f7f3f0] min-h-screen flex flex-col">
-        <Navbar />
+        
         <section className="pt-20 px-2 md:px-5">
           <div className="relative h-[70vh] md:h-screen w-full overflow-hidden">
             <div className="bg-gray-300 animate-pulse w-full h-full" />
@@ -65,7 +64,7 @@ const BlogDetailClient = ({ id }: { id: string }) => {
   if (error) {
     return (
       <main className="bg-[#f7f3f0] min-h-screen flex flex-col justify-center items-center">
-        <Navbar />
+       
         <section className="flex flex-col items-center justify-center pt-20 px-5 text-center">
           <div className="max-w-xl text-center">
             <h2 className="text-4xl font-semibold text-[#3a3225] mb-6">
@@ -95,7 +94,7 @@ const BlogDetailClient = ({ id }: { id: string }) => {
 
   return (
     <main className="bg-[#fff]">
-      <Navbar />
+     
 
       {/* Hero Section */}
       <section className="relative w-full h-[500px]">

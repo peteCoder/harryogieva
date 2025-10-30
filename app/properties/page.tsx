@@ -34,6 +34,7 @@ export const viewport: Viewport = {
 };
 
 const PropertyListings = () => {
+  
   return <PropertyListingClient />;
 };
 

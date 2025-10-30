@@ -3,6 +3,7 @@ import { Spinnaker } from "next/font/google";
 import "./globals.css";
 import LiveChatAndWhatsapp from "@/components/main/LiveChatAndWhatsapp";
 import { Toaster } from "@/components/ui/sonner";
+import Navbar from "@/components/main/Navbar";
 
 const spinnaker = Spinnaker({
   subsets: ["latin"],
@@ -70,14 +71,17 @@ export const viewport: Viewport = {
   themeColor: "#b19a55",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+
   return (
     <html lang="en">
       <body className={`${spinnaker.variable} font-spinnaker antialiased`}>
+        <Navbar  />
         {children}
 
         {/* Customized Sonner Toaster */}

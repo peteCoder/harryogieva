@@ -1,7 +1,6 @@
 "use client";
 
 import Footer from "@/components/main/Footer";
-import Navbar from "@/components/main/Navbar";
 import Autoplay from "embla-carousel-autoplay";
 import { Facebook, Mail, Twitter } from "lucide-react";
 import Image from "next/image";
@@ -55,7 +54,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
   if (loading) {
     return (
       <div className="bg-[#f7f3f0] min-h-screen flex flex-col">
-        <Navbar isDefaultBg />
+        
         <section className="pt-20 px-2 md:px-5">
           <div className="relative h-[70vh] md:h-screen w-full overflow-hidden">
             <div className="bg-gray-300 animate-pulse w-full h-full" />
@@ -80,7 +79,7 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
   if (error) {
     return (
       <main className="bg-[#f7f3f0] min-h-screen flex flex-col justify-center items-center">
-        <Navbar isDefaultBg />
+        
         {/* Property Not Found Section */}
         <section className="flex flex-col items-center justify-center pt-20 px-5 text-center">
           <div className="max-w-xl text-center">
@@ -111,7 +110,6 @@ const PropertyDetailClient = ({ propertyId }: { propertyId: string }) => {
 
   return (
     <main className="bg-[#f7f3f0]">
-      <Navbar isDefaultBg />
       {/* Banner Carousel Section */}
       <section className="pt-20 px-2 md:px-5">
         <div className="relative h-[70vh] md:h-screen w-full overflow-hidden">

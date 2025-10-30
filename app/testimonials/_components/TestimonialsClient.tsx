@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { TestimonialType } from "@/lib/types";
@@ -60,7 +59,7 @@ const TestimonialsClient = () => {
 
   return (
     <main className="bg-[#f7f3f0] min-h-screen text-[#3a2e25]">
-      <Navbar />
+      
 
       {/* HERO SECTION */}
       <section className="relative w-full h-[300px] flex items-center justify-center bg-[#eae4dc] text-center">

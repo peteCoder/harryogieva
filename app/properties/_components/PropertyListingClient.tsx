@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import HouseCard from "@/components/main/HouseCard";
 import { PropertyType } from "@/lib/types";
@@ -37,7 +36,6 @@ const PropertyListingClient = () => {
 
   return (
     <main className="bg-[#f7f3f0]">
-      <Navbar />
       <PageHero
         pageTitle=" Exclusive Properties"
         pageHeroBGImage="/images/hero_image.jpg"

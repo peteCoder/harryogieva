@@ -10,7 +10,6 @@ import {
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
-import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 
 import { toast } from "sonner";
@@ -76,7 +75,6 @@ const ContactClient = () => {
 
   return (
     <main>
-      <Navbar isDefaultBg />
       <div className=" mt-20"></div>
       <PageHero
         pageTitle="Contact Us"

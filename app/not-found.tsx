@@ -2,13 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
-import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 
 const NotFoundPage = () => {
   return (
     <main className="bg-[#f7f3f0] min-h-screen text-[#3a2e25] flex flex-col">
-      <Navbar isDefaultBg />
+      
 
       {/* HERO SECTION */}
       <section className="flex flex-col items-center justify-center flex-grow text-center px-6 pt-20">

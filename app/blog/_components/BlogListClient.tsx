@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import BlogCard from "@/components/main/BlogCard";
 import PageHero from "@/app/properties/_components/PageHero";
@@ -30,7 +29,7 @@ const BlogListClient = () => {
   if (loading) {
     return (
       <main className="bg-[#f7f3f0]">
-        <Navbar />
+        
         <PageHero
           pageTitle="Latest Blog Posts"
           pageHeroBGImage="/images/hero_image.jpg"
@@ -71,7 +70,6 @@ const BlogListClient = () => {
   if (blogPosts.length === 0) {
     return (
       <main className="bg-[#f7f3f0]">
-        <Navbar />
         <PageHero
           pageTitle="Latest Blog Posts"
           pageHeroBGImage="/images/hero_image.jpg"
@@ -100,7 +98,7 @@ const BlogListClient = () => {
 
   return (
     <main className="bg-[#f7f3f0]">
-      <Navbar />
+      
       <PageHero
         pageTitle="Latest Blog Posts"
         pageHeroBGImage="/images/hero_image.jpg"

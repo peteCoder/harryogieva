@@ -1,6 +1,6 @@
 export const ownerDetails = {
   name: "Harry Ogieva",
-  email: "harryosa234@gmail.com",
+  email: "info@harryogieva.com",
   domain: "https://www.harryogieva.com",
   phone: ["09038454760", "08115781007"],
   address:
