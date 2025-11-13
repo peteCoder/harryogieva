@@ -5,6 +5,8 @@ import LiveChatAndWhatsapp from "@/components/main/LiveChatAndWhatsapp";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/main/Navbar";
 
+import Script from "next/script";
+
 const spinnaker = Spinnaker({
   subsets: ["latin"],
   weight: "400",
@@ -81,7 +83,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${spinnaker.variable} font-spinnaker antialiased`}>
-        <Navbar  />
+        <Navbar />
         {children}
 
         {/* Customized Sonner Toaster */}
@@ -102,6 +104,20 @@ export default async function RootLayout({
               "border-none text-white bg-[#b19a55] shadow-md font-medium",
           }}
         />
+
+        {/* ✅ Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z297L8REK0"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Z297L8REK0');
+          `}
+        </Script>
 
         <LiveChatAndWhatsapp />
       </body>
