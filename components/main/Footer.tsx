@@ -194,6 +194,8 @@ const Footer = ({ showFirstPart }: { showFirstPart?: boolean }) => {
                 </span>
               </div>
 
+              
+
               <p className="text-base">
                 Copyright © {new Date().getFullYear()} |{" "}
                 <Link
